@@ -1,0 +1,12 @@
+.DS_Store
+.vscode/
+vendor/
+.env
+.env.local
+.env.*.local
+.phpunit.result.cache
+/build/
+/public/build/
+/storage/*.key
+/storage/debugbar/*
+/storage/logs/*.log         
