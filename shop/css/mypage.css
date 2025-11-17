@@ -1,0 +1,346 @@
+/* 비회원 주문조회 */
+#nomember {height: calc(100vh - 192px); display: flex; align-items: center;}
+#nomember .grey_border {border: 1px solid #e6e6e6; padding: 50px; letter-spacing: -0.03em;}
+#nomember .grey_border .sub_title {text-align: center;}
+#nomember .grey_border .nomember_info {font-size: 0.8125em; opacity: 0.75; text-align: center;}
+#nomember .grey_border .nomember_info a {display: inline-block; font-weight: 700;}
+#nomember .grey_border .form_wrap {width: 100%;}
+#nomember .grey_border .form_wrap li {display: flex; align-items: center;}
+#nomember .grey_border .form_wrap li:not(:last-child) {margin-bottom: 10px;}
+#nomember .grey_border .form_wrap li .form_title {width: 100px;}
+#nomember .grey_border .form_wrap li .form_input {width: calc(100% - 100px);}
+#nomember .grey_border .form_wrap li .form_input input {width: 100%;}
+
+#loginBtn, #joinBtn, #goOrderHistoryBtn {font-size: 1.0625em; height: 50px; cursor: pointer;}
+#joinBtn {width: 100%; margin-top: 80px; font-weight: 500;}
+#goOrderHistoryBtn {width: 100%; margin: 80px 0 15px;}
+
+.padding170 {padding: 170px 0 70px;}
+#login .login_form_wrap {border-top: 1px solid #111; border-bottom: 1px solid #e6e6e6; padding: 50px 0; display: flex; column-gap: 10px; align-items: stretch;}
+#loginBtn {height: auto; width: 110px;}
+#login .form_wrap {width: calc(100% - 110px - 10px);}
+#login .form_wrap > li:not(:last-child) {margin-bottom: 10px;}
+#login .form_wrap.with_title .form_label_ani .form_title {width: 80px;}
+#login .form_wrap.with_title .form_label_ani fieldset {width: calc(100% - 80px);}
+
+#login .find_wrap {margin: 12px 0 25px;}
+#login .find_wrap {display: flex; align-items: center; justify-content: flex-end; column-gap: 15px;}
+#login .find_wrap li {font-size: 0.875em; font-weight: 500; cursor: pointer; transition: color .2s; color: #aaa;}
+#login .find_wrap li:hover {color: #777;}
+
+#login .social_wrap {display: flex; column-gap: 10px;}
+#login .social_wrap > a {width: calc((100% - 10px)/2); height: 55px; display: flex; align-items: center; justify-content: center; column-gap: 8px; font-weight: 500;}
+#login .social_wrap > a.naver {background: rgb(3,199,90); color: #fff;}
+#login .social_wrap > a.kakao {background: #FEE500; color: rgb(0, 0, 0, 0.85);}
+
+#login .loing_bt_wrap .join_row {margin: 80px 0 30px; display: flex; align-items: center; justify-content: center; column-gap: 30px;}
+#login .loing_bt_wrap .join_row p {font-size: 0.875em; color: #aaa;}
+#login .loing_bt_wrap .join_row a {font-size: 0.9375em; width: 150px; height: 55px;}
+#login .loing_bt_wrap #orderHistoryBtn {width: 100%; height: 55px; font-size: 0.9375em; background: #f6f6f6; color: #111; transition: background .2s;}
+#login .loing_bt_wrap #orderHistoryBtn:hover {background: #f1f1f1;}
+
+#join .join_form_wrap {font-size: 0.9375em;}
+#join .join_form_wrap .form_type {padding: 30px 0; margin-bottom: 50px; border-bottom: 1px solid #e6e6e6;}
+#join .join_form_wrap .form_wrap.with_title .form_label_ani .form_title {width: 110px;}
+#join .join_form_wrap .form_wrap.with_title .form_label_ani fieldset {width: calc(100% - 110px);}
+#join .join_form_wrap .with_radio .radio_wrap {display: flex; align-items: center; column-gap: 50px;}
+#join .join_form_wrap .with_radio .radio_wrap label {position: static; transform: none !important; color: #111; font-size: inherit;}
+
+#mypage .mypage_tab {margin-bottom: 50px; display: flex; align-items: center; justify-content: center; column-gap: 5px;}
+#mypage .mypage_tab li {max-width: calc((100% - 10px)/3);}
+#mypage .mypage_tab li a {width: 150px; max-width: 100%; height: 45px; font-size: 0.9375em; transition: background .2s, color .2s; display: flex; align-items: center; justify-content: center; background: #f6f6f6;}
+#mypage .mypage_tab li.active a {background: #111; color: #fff;}
+#mypage .mypage_tab li:not(.active) a:hover {background: #f1f1f1;}
+#mypage .mypage_title {font-size: 1.625em; font-weight: 700; margin-bottom: 24px;}
+
+#mypage .order_table {border-top: 1px solid #111; margin-top: -1px;}
+#mypage .order_table > li + li {border-top: 1px solid #111;}
+#mypage .order_table > li .thead {display: flex; align-items: center; flex-wrap: wrap; column-gap: 50px; padding: 20px 0; font-size: 0.875em; border-bottom: 1px solid #e6e6e6;}
+#mypage .order_table > li .thead > div {display: flex; align-items: center; column-gap: 15px;}
+#mypage .order_table > li .thead > div > span {font-weight: 500;}
+#mypage .order_table > li .thead .td_order_date {opacity: 0.75;}
+#mypage .order_table > li .thead .td_order_number {font-size: 1.0625rem; font-weight: 700; display: flex; align-items: center; column-gap: 3px;}
+#mypage .order_table > li .tbody {padding: 30px 50px 30px 30px; border-bottom: 1px solid #e6e6e6; display: flex; align-items: center;}
+#mypage .order_table > li .tbody .td_order_thumbnail {width: 100px;}
+#mypage .order_table > li .tbody .price_and_type {display: flex; align-items: center; font-size: 0.875em; margin-top: 15px;}
+#mypage .order_table > li .tbody .price_and_type > div:not(:last-child) {display: inline-flex; align-items: center;}
+#mypage .order_table > li .tbody .price_and_type > div:not(:last-child)::after {content: ""; display: block; background: #e6e6e6; width: 1px; height: 13px; margin: 0 12px;}
+#mypage .order_table > li .tbody .price_and_type .td_order_price {font-weight: 600;}
+#mypage .order_table > li .tbody .price_and_type .td_order_price span {font-size: 1.15em; font-weight: 700;}
+#mypage .order_table > li .tbody .price_and_type .td_order_pay_type {opacity: 0.75;}
+#mypage .order_table > li .tbody .td_order_info_wrap {width: calc(100% - 100px); padding-left: 25px; display: flex; align-items: center;}
+#mypage .order_table > li .tbody .td_2 {width: calc(100% - 320px);}
+#mypage .order_table > li .tbody .td_3 {width: 320px; display: flex; align-items: center; justify-content: space-between;}
+#mypage .order_table > li .tbody .td_order_state {font-size: 1.0625em; font-weight: 500;}
+#mypage .order_table > li .tbody .td_order_tracking button {font-size: 0.875em; padding: 10px 20px;}
+
+#mypage .order_table.detail_table {margin-bottom: 50px;}
+#mypage .order_table.detail_table > li .thead .td_order_number {cursor: inherit;}
+#mypage .order_table.detail_table > li .tbody {padding-left: 0;}
+#mypage .order_table.detail_table > li .tbody .td_order_info_wrap {width: 100%;}
+#mypage .order_table.detail_table > li .tbody .price_and_type {font-size: 1em;}
+#mypage .order_table.detail_table > li .tbody .price_and_type .td_order_price span {font-size: 1.625em; margin-left: 15px;}
+
+#mypage.page_orderhistory.detail .btn_wrap {margin: 30px 0 80px auto; justify-content: flex-end;}
+#mypage .order_detail_info_wrap {display: flex; column-gap: 75px;}
+#mypage .order_detail_info_wrap > div {width: 50%; max-width: calc((100% - 75px)/2);}
+#mypage .order_detail_table {display: flex; flex-wrap: wrap; font-size: 0.9375em;}
+#mypage .order_detail_table li {width: 100%; display: flex; border-bottom: 1px solid #e6e6e6;}
+#mypage .order_detail_table li > div {padding: 21px 10px 19px; word-break: break-word;}
+#mypage .order_detail_table li.half {width: 50%; border-right: 1px solid #e6e6e6;}
+#mypage .order_detail_table li.half:nth-child(2n) {border-right: 0;}
+#mypage .order_detail_table li .lt {width: 150px; padding-left: 30px; border-right: 1px solid #e6e6e6;}
+#mypage .order_detail_table li .rt {width: calc(100% - 150px); padding-left: 15px;}
+
+#trackingPop {width: 500px;}
+#trackingPop .tracking_table {display: flex; flex-wrap: wrap; font-size: 0.9375em; margin-top: 30px;}
+#trackingPop .tracking_table li {width: 100%; display: flex; border-bottom: 1px solid #e6e6e6;}
+#trackingPop .tracking_table li > div {padding: 21px 10px 19px; word-break: break-word;}
+#trackingPop .tracking_table li .lt {width: 120px; padding-left: 20px; border-right: 1px solid #e6e6e6;}
+#trackingPop .tracking_table li .rt {width: calc(100% - 120px); padding-left: 15px;}
+#trackingPop .tracking_table li.stretch {align-items: stretch;}
+#trackingPop .tracking_table li.stretch .lt {display: flex; align-items: center;}
+#trackingPop .tracking_table li.stretch .rt {padding: 0;}
+#trackingPop .tracking_table li.stretch .rt > div {padding: 15px;}
+#trackingPop .tracking_table li.stretch .rt > div:not(:last-child) {border-bottom: 1px solid #e6e6e6;}
+#trackingPop .tracking_table li.stretch .rt > div .prdName {font-size: 1em;}
+#trackingPop .tracking_table li.stretch .rt > div .delivery_state {display: flex; align-items: center; justify-content: space-between; column-gap: 15px; margin-top: 7px;}
+#trackingPop .tracking_table li.stretch .rt > div .delivery_state .invoice {color: #aaa;}
+#trackingPop .tracking_table li.stretch .rt > div .delivery_state .invoice a {text-decoration: underline; display: inline-block; text-underline-offset: 3px; margin-left: 3px;}
+#trackingPop .no_tracking_data {opacity: 0.75; padding: 60px 0 30px; text-align: center;}
+
+#mypage .inquiry_table {text-align: center;}
+#mypage .inquiry_table li {display: flex; border-bottom: 1px solid #e6e6e6;}
+#mypage .inquiry_table li .td_date {width: 135px;}
+#mypage .inquiry_table li .td_type {width: 110px;}
+#mypage .inquiry_table li .td_title {width: calc(100% - 135px - 110px - 150px);}
+#mypage .inquiry_table li .td_state {width: 150px;}
+#mypage .inquiry_table li.thead {font-size: 0.875em; font-weight: 500; border-top: 1px solid #111;}
+#mypage .inquiry_table li.tbody {font-size: 0.9375em;}
+#mypage .inquiry_table li > div {padding: 18px 10px 19px;}
+#mypage .inquiry_table li > div:not(:last-child) {border-right: 1px solid #e6e6e6;}
+#mypage .inquiry_table > li .td_state.yet .state_yet_badge {display: block;}
+#mypage .inquiry_table > li .td_state.yet .state_end_badge {display: none;}
+#mypage .inquiry_table > li .td_state.end .state_yet_badge {display: none;}
+#mypage .inquiry_table > li .td_state.end .state_end_badge {display: block;}
+#mypage .inquiry_table li.tbody .td_title {text-align: left; padding-left: 30px;}
+#mypage .inquiry_table li.tbody .td_state {font-weight: bold;}
+#inquiryPop {width: 600px; max-width: calc(100% - 40px);}
+#inquiryPop .inquiry_top {max-width: calc(100% - 50px);}
+#inquiryPop .inquiry_top .find_txt {text-align: left;}
+#inquiryPop .inquiry_top .find_txt .big {line-height: 130%; word-break: keep-all; margin-bottom: 20px;}
+#inquiryPop .inquiry_top .find_txt ul {margin-top: 20px; display: flex; align-items: center;}
+#inquiryPop .inquiry_top .find_txt ul li .td_type {font-weight: 500;}
+#inquiryPop .inquiry_top .find_txt ul li:last-child {opacity: 0.75;}
+#inquiryPop .inquiry_top .find_txt ul li:not(:last-child) {display: inline-flex; align-items: center;}
+#inquiryPop .inquiry_top .find_txt ul li:not(:last-child)::after {content: ""; display: block; width: 1px; height: 12px; background: #e6e6e6; margin: 0 10px;}
+#inquiryPop .inquiry_table {display: flex; flex-wrap: wrap; font-size: 0.9375em; margin-top: 30px;}
+#inquiryPop .inquiry_table li {width: 100%; display: flex; border-bottom: 1px solid #e6e6e6;}
+#inquiryPop .inquiry_table li > div {padding: 21px 10px 19px; word-break: break-word;}
+#inquiryPop .inquiry_table li .lt {width: 150px; padding-left: 30px; border-right: 1px solid #e6e6e6;}
+#inquiryPop .inquiry_table li .rt {width: calc(100% - 150px); padding-left: 15px; white-space: pre-line;}
+
+#mypage.edit .form_wrap.border_top {padding-top: 20px;}
+#mypage.edit .half_section {display: flex; justify-content: space-between;}
+#mypage.edit .half_section .half {width: 50%; max-width: calc((100% - 75px)/2);}
+#mypage.edit .half_section #pwChangeBtn {margin-top: 30px; width: 185px; height: 50px; margin-left: auto;}
+#mypage.edit .edit_btn_wrap {position: relative; margin: 80px auto 0; display: flex; justify-content: center; width: 100%;}
+#mypage.edit .edit_btn_wrap .w_500 {font-size: 1.0625em; width: 500px; height: 50px; max-width: calc(100% - 420px);}
+#mypage.edit .edit_btn_wrap #withdrawBtn {position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: #f6f6f6; color: #111; width: 185px; height: 50px;}
+
+#mypage.withdraw .edit_btn_wrap {margin-top: 35px; display: flex; justify-content: center; align-items: center; column-gap: 10px;}
+#mypage.withdraw .edit_btn_wrap .border_btn {width: 275px; max-width: 50%; height: 50px; column-gap: 10px; font-size: 1em;}
+#mypage.withdraw .edit_btn_wrap .border_btn[onclick="naverLogin();"] {background: rgb(3,199,90); color: #fff;border: 0;}
+#mypage.withdraw .edit_btn_wrap .border_btn[onclick="kakaoLogin();"] {background: #FEE500; color: rgb(0, 0, 0, 0.85);border: 0;}
+#mypage.withdraw .withdraw_wrap .withdraw_notice {padding: 30px; height: 400px; background: #f6f6f6; font-size: 0.9375em;}
+#mypage.withdraw .withdraw_wrap .withdraw_notice .bold {font-weight: 600; margin-bottom: 45px;}
+#mypage.withdraw .withdraw_wrap .withdraw_notice ul {opacity: 0.75; line-height: 152%; letter-spacing: -0.5px; list-style: "-  "; padding-left: 10px;}
+#mypage.withdraw .withdraw_wrap .withdraw_notice ul li:not(:last-child) {margin-bottom: 25px;}
+#mypage.withdraw .withdraw_reason {margin: 30px auto 50px;}
+#mypage.withdraw .withdraw_reason .flex {display: flex; justify-content: center; align-items: center;}
+#mypage.withdraw .withdraw_reason .etc_hidden {display: none; width: 100%; margin-top: 20px;}
+#mypage.withdraw .withdraw_reason span {opacity: 0.75; width: 110px;}
+#mypage.withdraw .withdraw_reason select {width: 520px; height: 45px; max-width: calc(100% - 110px); border-bottom: 1px solid #111;}
+
+
+
+@media screen and (max-width: 1420px) {
+  #mypage.edit .half_section .half {max-width: calc((100% - 50px)/2);}
+}
+
+@media screen and (max-width: 1275px) {
+  #mypage .order_detail_info_wrap {column-gap: 30px;}
+  #mypage .order_detail_info_wrap > div {max-width: calc((100% - 30px)/2);}
+  #mypage .order_detail_table li .lt {width: 100px; padding-left: 15px;}
+  #mypage .order_detail_table li .rt {width: calc(100% - 100px);}
+  
+  #mypage .order_table > li .tbody {padding: 30px 30px 30px 0;}
+  /* #mypage .order_table > li .tbody .td_2 {width: calc(100% - 200px);}
+  #mypage .order_table > li .tbody .td_3 {width: 200px;} */
+  #mypage .order_table > li .tbody .price_and_type {margin-top: 12px;}
+  
+  #mypage .order_table.list_table > li .tbody .td_2 {width: 100%;}
+  #mypage .order_table.list_table > li .tbody .td_3 {width: 100%; align-items: flex-end;}
+  #mypage .order_table.list_table > li .tbody .td_order_info_wrap {flex-direction: column; row-gap: 10px; align-items: flex-start;}
+
+  #mypage .order_table.detail_table > li .tbody .price_and_type .td_order_price span {font-size: 1.5em; margin-left: 12px;}
+
+  #trackingPop .tracking_table li .lt {width: 100px; padding-left: 15px;}
+  #trackingPop .tracking_table li .rt {width: calc(100% - 100px);}
+
+  #inquiryPop .inquiry_table li .lt {width: 100px; padding-left: 15px;}
+  #inquiryPop .inquiry_table li .rt {width: calc(100% - 100px);}
+
+  #mypage.edit .half_section {flex-wrap: wrap; row-gap: 50px;}
+  #mypage.edit .half_section .half {width: 100%; max-width: none;}
+}
+
+@media screen and (max-width: 1024px) {
+  #nomember {height: calc(100vh - 162px);}
+  #nomember .wrapper_500 {max-width: 480px;}
+  #nomember .grey_border {padding: 50px 40px;}
+  #nomember .grey_border .form_wrap li .form_title {width: 90px;}
+  #nomember .grey_border .form_wrap li .form_input {width: calc(100% - 90px);}
+  #goOrderHistoryBtn {margin: 70px 0 15px;}
+  
+  #mypage .mypage_title {font-size: 1.4em;}
+  
+  #mypage .order_table > li .tbody {padding: 30px 15px 30px 0;}
+  #mypage .order_table > li .tbody .price_and_type {margin-top: 10px;}
+  #mypage .order_table > li .thead .td_order_number {font-size: 1rem;}
+  #mypage .order_table > li .thead .td_order_number img {width: 13px;}
+  #mypage .order_table.detail_table {margin-bottom: 40px;}
+  #mypage .order_table.detail_table > li .tbody .td_order_info_wrap {padding-left: 15px; flex-direction: column; row-gap: 15px;}
+  #mypage .order_table.detail_table > li .tbody .td_2 {width: 100%;}
+  #mypage .order_table.detail_table > li .tbody .td_3 {width: 100%; align-items: flex-end;}
+
+  #mypage .order_detail_info_wrap {flex-direction: column; row-gap: 80px;}
+  #mypage .order_detail_info_wrap > div {width: 100%; max-width: none;}
+  #mypage .order_detail_table li .lt {width: 120px; padding-left: 20px;}
+  #mypage .order_detail_table li .rt {width: calc(100% - 120px);}
+
+  #mypage .inquiry_table li > div {padding: 15px 10px 16px;}
+  #mypage .inquiry_table li .td_date {width: 110px;}
+  #mypage .inquiry_table li .td_type {width: 90px;}
+  #mypage .inquiry_table li .td_title {width: calc(100% - 110px - 90px - 110px);}
+  #mypage .inquiry_table li .td_state {width: 110px;}
+  #mypage .inquiry_table li.tbody .td_title {padding-left: 20px;}
+
+  #mypage.edit .half_section {row-gap: 40px;}
+  #mypage.edit .half_section #pwChangeBtn {width: 150px; height: 45px; font-size: 0.9375em;}
+  #mypage.edit .edit_btn_wrap {margin: 70px auto 0;}
+  #mypage.edit .edit_btn_wrap .w_500 {height: 45px; max-width: calc(100% - 330px);}
+  #mypage.edit .edit_btn_wrap #withdrawBtn {width: 150px; height: 45px;}
+
+  #mypage.withdraw .withdraw_reason span {width: 90px;}
+  #mypage.withdraw .withdraw_reason select {max-width: calc(100% - 90px);}
+}
+
+@media screen and (max-width: 768px) {
+  #nomember {height: calc(100vh - 160px);}
+  #nomember .wrapper_500 {max-width: 375px;}
+  #nomember .grey_border {padding: 35px 25px;}
+  #nomember .grey_border .form_wrap li .form_title {width: 70px;}
+  #nomember .grey_border .form_wrap li .form_input {width: calc(100% - 70px);}
+  #goOrderHistoryBtn {margin: 46px 0 15px;}
+
+  #joinBtn, #orderHistoryBtn, #goOrderHistoryBtn {height: 45px;}
+  .padding170 {padding: 100px 0 50px;}
+  #login .login_form_wrap {padding: 25px 0; flex-direction: column; row-gap: 30px;}
+  #loginBtn {width: 100%; height: 45px; font-size: 1.111em;}
+  #login .form_wrap {width: 100%;}
+  #login .form_wrap.with_title .form_label_ani .form_title {width: 60px;}
+  #login .form_wrap.with_title .form_label_ani fieldset {width: calc(100% - 60px);}
+  
+  #login .social_wrap {flex-direction: column; row-gap: 7px;}
+  #login .social_wrap a {width: 100%; height: 45px;}
+  #login .social_wrap > a img {max-height: 15px;}
+  
+  #login .loing_bt_wrap .join_row {margin: 50px 0 20px; column-gap: 17px;}
+  #login .loing_bt_wrap .join_row a {width: 110px; height: 40px; font-size: 1em;}
+  #login .loing_bt_wrap #orderHistoryBtn {height: 45px; font-size: 1em;}
+  
+  #join .join_form_wrap .form_type {padding: 20px 0; margin-bottom: 25px;}
+  #join .join_form_wrap .form_wrap.with_title .form_label_ani .form_title {width: 90px;}
+  #join .join_form_wrap .form_wrap.with_title .form_label_ani fieldset {width: calc(100% - 90px);}
+  #join .join_form_wrap .with_radio .radio_wrap {column-gap: 30px;}
+  #join .join_form_wrap .with_radio .radio_wrap label {column-gap: 5px;}
+  #joinBtn {margin-top: 50px;}
+
+  #mypage .mypage_title {font-size: 1.325em; margin-bottom: 15px;}
+  #mypage .mypage_tab {margin-bottom: 40px;}
+  #mypage .mypage_tab li a {height: 35px;}
+
+  #mypage .order_table > li .thead {padding: 15px 0; flex-direction: column; row-gap: 5px; align-items: flex-start;}
+  #mypage .order_table > li .tbody {padding: 20px 0;}
+  #mypage .order_table > li .tbody .td_order_thumbnail {width: 80px;}
+  #mypage .order_table > li .tbody .price_and_type {margin-top: 7px;}
+  #mypage .order_table > li .tbody .td_order_info_wrap {padding-left: 0; row-gap: 12px;}
+  #mypage .order_table > li .tbody .td_order_state {font-size: 1em;}
+  #mypage .order_table > li .tbody .td_order_tracking button {padding: 8px 15px;}
+  #mypage .order_table.list_table > li .tbody {align-items: flex-start;}
+  #mypage .order_table.list_table > li .tbody .td_order_info_wrap {width: calc(100% - 80px); padding-left: 20px;}
+  #mypage .order_table.list_table > li .tbody .td_3 {flex-wrap: wrap; row-gap: 7px;}
+
+  #mypage .order_table.detail_table {margin-bottom: 30px;}
+  #mypage .order_table.detail_table > li .tbody .price_and_type .td_order_price span {margin-left: 10px;}
+
+  #mypage.page_orderhistory.detail .btn_wrap {margin: 20px 0 70px auto;}
+  #mypage .order_detail_info_wrap {row-gap: 50px;}
+  #mypage .order_detail_table li > div {padding: 16px 10px 15px;}
+  #mypage .order_detail_table li .lt {width: 80px; padding-left: 10px;}
+  #mypage .order_detail_table li .rt {width: calc(100% - 80px);}
+
+  #trackingPop .tracking_table {margin-top: 20px;}
+  #trackingPop .tracking_table li > div {padding: 16px 10px 15px;}
+  #trackingPop .tracking_table li .lt {width: 80px; padding-left: 10px;}
+  #trackingPop .tracking_table li .rt {width: calc(100% - 80px);}
+  #trackingPop .no_tracking_data {padding: 30px 0 15px;}
+  
+  #inquiryPop .inquiry_top {max-width: calc(100% - 20px);}
+  #inquiryPop .inquiry_top .find_txt .big {font-size: 1.625em; line-height: 125%; margin-bottom: 15px;}
+  #inquiryPop .inquiry_top .find_txt ul {margin-top: 15px;}
+  #inquiryPop .inquiry_table {margin-top: 20px;}
+  #inquiryPop .inquiry_table li > div {padding: 16px 10px 15px;}
+  #inquiryPop .inquiry_table li .lt {width: 70px; padding-left: 10px;}
+  #inquiryPop .inquiry_table li .rt {width: calc(100% - 70px);}
+
+  #mypage .inquiry_table li > div {padding: 13px 10px;}
+  #mypage .inquiry_table li .td_date {display: none;}
+  #mypage .inquiry_table li .td_type {width: 70px;}
+  #mypage .inquiry_table li .td_title {width: calc(100% - 70px - 80px);}
+  #mypage .inquiry_table li .td_state {width: 80px;}
+  #mypage .inquiry_table li.tbody .td_title {padding-left: 15px;}
+
+  #mypage.edit .form_wrap.border_top {padding-top: 10px;}
+  #mypage.edit .half_section {row-gap: 35px;}
+  #mypage.edit .half_section #pwChangeBtn {margin-top: 15px; width: 110px; height: 40px; font-size: 0.9375em;}
+  #mypage.edit .form_wrap.with_title .form_label_ani .form_title {width: 90px;}
+  #mypage.edit .form_wrap.with_title .form_label_ani fieldset {width: calc(100% - 90px);}
+  #mypage.edit .edit_btn_wrap {margin: 50px auto 0; justify-content: space-between;}
+  #mypage.edit .edit_btn_wrap .w_500 {height: 40px; max-width: calc(100% - 75px);}
+  #mypage.edit .edit_btn_wrap #withdrawBtn {width: 70px; height: 40px; position: static; transform: none;}
+
+  #mypage.withdraw .edit_btn_wrap .border_btn {height: 45px;}
+  #mypage.withdraw .withdraw_wrap .withdraw_notice {height: auto; min-height: 300px; padding: 30px 20px;}
+  #mypage.withdraw .withdraw_reason {margin: 25px auto 40px;}
+  #mypage.withdraw .withdraw_reason span {width: 70px;}
+  #mypage.withdraw .withdraw_reason select {width: 520px; height: 42px; max-width: calc(100% - 70px);}
+}
+
+@media screen and (max-width: 540px) {
+  #mypage .order_table > li .tbody .td_order_thumbnail {width: 60px;}
+  #mypage .order_table.list_table > li .tbody .td_order_info_wrap {width: calc(100% - 60px); padding-left: 15px;}
+  #mypage .order_table > li .tbody .td_order_tracking button {padding: 6px 12px;}
+  #mypage.page_orderhistory.detail .btn_wrap *.w_300 {width: auto; height: auto; padding: 7px 15px; font-size: 0.875em;}
+
+  #mypage.edit .half_section #pwChangeBtn {width: 100px; height: 35px;}
+  #mypage.withdraw .edit_btn_wrap {margin-top: 30px;}
+  #mypage.withdraw .edit_btn_wrap .border_btn {height: 40px;}
+  #mypage.withdraw .edit_btn_wrap .border_btn {column-gap: 7px;}
+  #mypage.withdraw .edit_btn_wrap .border_btn img {max-height: 15px;}
+
+  #trackingPop .tracking_table li .lt {width: 75px;}
+  #trackingPop .tracking_table li .rt {width: calc(100% - 75px);}
+  #trackingPop .tracking_table li.stretch .rt > div .delivery_state {flex-direction: column; row-gap: 5px; align-items: flex-start; margin-top: 10px;}
+}

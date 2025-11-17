@@ -1,0 +1,61 @@
+// 텍스트 말줄임 1줄
+@mixin txtEllipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 텍스트 말줄임 2줄 이상
+@mixin txtWebkitBox($line) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
+
+// absolute 중앙 정렬
+@mixin transCenter {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 섬네일 이미지 중앙 정렬
+@mixin thumbCenter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+
+// 개별 포지션 적용
+// 적용될 클래스에 position: relative; left: 50%; 적용
+// 변수 객체 설정
+// $compBackPos : (
+//     1 : (max-width: 425px,
+//         top: -15vh,
+//     ),
+//     2 : (max-width: 400px,
+//         top: -30vh,
+//     ),
+// );
+@mixin individualPosSet($config, $commonName){
+
+    @each $key,$val in $config {
+  
+      $selector: "&.#{$commonName}#{$key}";
+  
+      #{$selector} {
+        @each $prop, $propVal in $val {
+          #{$prop}: $propVal;
+        }
+      }
+  
+    }
+
+}

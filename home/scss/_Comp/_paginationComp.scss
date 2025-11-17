@@ -1,0 +1,122 @@
+.pager {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    transition: 0.4s;
+
+    > button {
+        opacity: 0.5;
+
+        &.pager-prev {
+        }
+
+        &.pager-next {
+
+            img{
+                transform: scale(-1);
+            }
+
+        }
+
+        &.active {
+            opacity: 1;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+    }
+
+    .page {
+        font-size: .9375rem;
+        font-weight: 500;
+        text-align: center;
+        color: $greyLine;
+        transition: 0.4s;
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15px;
+            height: 1px;
+            background-color: #000;
+            opacity: 0;
+            transition: 0.4s;
+        }
+
+        &.active {
+            color: $bodyColor;
+
+            &::after{
+                opacity: 1;
+            }
+
+        }
+
+        &:hover {
+            color: $bodyColor;
+        }
+
+    }
+
+}
+
+
+
+
+
+// ! -------------------- [Responsive] -------------------- !
+
+@media screen and (max-width: 1440px) {}
+
+@media screen and (max-width: 1240px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {
+
+    .pager{
+
+        button{
+
+            &.pager-prev{
+                margin-right: 20px;
+            }
+    
+            &.pager-next{
+                margin-left: 20px;
+            }
+
+        }
+
+    }
+
+
+}
+
+@media screen and (max-width: 540px) {
+
+    .pager{
+
+        button{
+            
+            &.pager-prev{
+                margin-right: 15px;
+            }
+    
+            &.pager-next{
+                margin-left: 15px;
+            }
+
+        }
+
+    }
+
+}

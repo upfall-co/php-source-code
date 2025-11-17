@@ -1,0 +1,623 @@
+@import "./baseConfig";
+@import "./customFunc";
+
+/**************************************** form 시작*/
+
+$gridColumn: (
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+);
+
+.form__container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+    // ---------- form 안내문구
+    .form_cap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 15px;
+
+        p {
+            font-size: .9375rem;
+            font-weight: 500;
+
+            span {
+                color: $pointColor;
+            }
+
+        }
+
+    }
+
+    // ---------- input 컨테이너
+    .input_container {
+        border-top: 2px solid $bodyColor;
+    }
+
+    // ---------- input 설정
+    .input_wrap {
+        display: grid;
+        grid-template-columns: 1.5fr 8.5fr;
+        border-bottom: 1px solid #CCCCCC;
+
+        .title {
+            display: flex;
+            align-items: center;
+            font-size: 1.0625rem;
+            font-weight: 500;
+            padding: 0 20px;
+
+            span {
+                display: contents;
+                color: salmon;
+            }
+
+            &.title_type{
+                @extend .title;
+
+                &--upper{
+                    align-items: flex-start;
+                    padding-top: calc(1.0625rem + (1.0625rem/2));
+                }
+                
+            }
+
+        }
+
+        // 인풋 공통 버튼 디자인
+        .input_btn {
+            font-size: 1.0625rem;
+            font-weight: 500;
+            max-width: 120px;
+            min-width: 120px;
+            width: 100%;
+            height: 55px;
+            border-radius: 5px;
+            border: 2px solid #111111;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.4s;
+
+            &:hover{
+                background-color: #111111;  
+                color: #fff;
+            }
+
+        }
+        
+        // 인풋 설명 캡션
+        .input_cap {
+            font-size: .875rem;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .input_contents {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 15px 0;
+
+            input[type="text"],
+            input[type="tel"],
+            input[type="email"],
+            input[type="password"],
+            input[type="date"] {
+                height: 55px;
+                font-size: 1.0625rem;
+                border: 1px solid #E6E6E6;
+                border-radius: 5px;
+
+                &::placeholder {
+                    color: #aaa;
+                }
+
+                &:disabled,
+                &:read-only{
+                    background-color: #aaa;
+                }
+            }
+
+            select {
+                height: 55px;
+                border: 1px solid #E6E6E6;
+                border-radius: 5px;
+                font-size: 1.0625rem;
+
+                &:invalid {
+                    color: #aaa;
+                }
+
+                &:valid {
+                    color: $bodyColor;
+                }
+
+                option {
+                    color: $bodyColor;
+                }
+
+                option[value=""][disabled] {
+                    display: none;
+                }
+
+            }
+
+            // ---------- 일반 텍스트 인풋
+            .type_text {
+                width: 100%;
+                position: relative;
+
+                input[type="text"] {
+                    width: 100%;
+                }
+
+                .clear {
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: none;
+                }
+
+            }
+
+            // ---------- 검색 인풋
+            .type_search {
+                position: relative;
+                width: 100%;
+                border-radius: 5px;
+                border: 1px solid #E6E6E6;
+
+                input[type="text"] {
+                    width: 100%;
+                    border: 0;
+                }
+
+                .clear {
+                    position: absolute;
+                    right: 25px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: none;
+                }
+
+            }
+
+            // ---------- 날짜 인풋
+            .type_date {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                column-gap: 20px;
+
+                select {
+                    max-width: 190px;
+                    width: 100%;
+                }
+
+                input[type="date"]{
+                    border-radius: 5px;
+                    max-width: 525px;
+                    width: 100%;
+                    height: 55px;
+                    background-image: url(/img/date.svg);
+                    background-position: right 15px center;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    font-size: 1.0625rem;
+
+                    &::-webkit-inner-clear-button,
+                    &::-webkit-inner-spin-button {
+                        display: none;
+                        appearance: none;
+                    }
+
+                    &::-webkit-calendar-picker-indicator{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: transparent;
+                        color: transparent;
+                        cursor: pointer;
+                    }
+
+                }
+
+            }
+
+            // ---------- 라디오 인풋
+
+            .type_radio {
+                width: 100%;
+                display: grid;
+                align-items: center;
+                column-gap: 30px;
+                row-gap: 10px;
+
+                input[type="radio"]+label {
+                    font-size: 1.0625rem;
+                    opacity: 1;
+                }
+
+                @each $key,
+                $val in $gridColumn {
+                    &.type_radio--g#{$key} {
+                        grid-template-columns: repeat($val, 1fr);
+                    }
+                }
+
+                &.type_radio{
+                    
+                    &--flex{
+                        display: flex;
+                    }
+
+                }
+
+            }
+
+            // ---------- 연락처 인풋
+            .type_tel {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                column-gap: 5px;
+
+                // 수동 입력
+                &.type_tel--t1{
+
+                    input[type="tel"],
+                    input[type="text"] {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+
+                }
+
+                // 하이픈 포함
+                &.type_tel--t2{
+
+                    input[type="tel"],
+                    input[type="text"] {
+                        max-width: 190px;
+                        width: 100%;
+                    }
+    
+                    select {
+                        max-width: 190px;
+                        width: 100%;
+                    }
+
+                }
+
+
+            }
+
+            // ---------- 셀렉트박스 인풋
+            .type_select {
+                width: 100%;
+
+                select {
+                    max-width: 190px;
+                    width: 100%;
+                }
+
+            }
+
+            // ---------- 이메일 인풋
+            .type_email {
+                width: 100%;
+
+                input[type="email"],
+                input[type="text"] {
+                    width: 100%;
+                }
+
+                &.type_email--t1{
+
+                    input[type="email"],
+                    input[type="text"] {
+                        max-width: 100%;
+                    }
+    
+                }
+
+                &.type_email--t2{
+                    display: flex;
+                    align-items: center;
+                    column-gap: 5px;
+    
+                    > input[type="email"],
+                    > input[type="text"] {
+                        max-width: 250px;
+                    }
+   
+                    .select_wrap{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        column-gap: 5px;
+
+                        > input[type="email"],
+                        > input[type="text"] {
+                            max-width: 250px;
+                        }
+
+                        select {
+                            max-width: 250px;
+                            width: 100%;
+                        }
+
+                    }
+                    
+                }
+
+            }
+
+            // ---------- 비밀번호 인풋
+            .type_password {
+                width: 100%;
+
+                input[type="password"] {
+                    width: 100%;
+                }
+
+                // ---------- 비밀번호/보기
+                &.type_password--t2{
+                    position: relative;
+                    
+                    input[type="text"] {
+                        width: 100%;
+                    }
+
+                    .pw_show_btn{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 15px;
+                        display: none;
+                    }
+
+                }
+
+            }
+
+            // ---------- 텍스트에리어 인풋
+            .type_textarea {
+                width: 100%;
+
+                textarea {
+                    width: 100%;
+                    height: 260px;
+                    font-size: 1.125rem;
+                    border: 1px solid #E6E6E6;
+                    border-radius: 5px;
+
+                    &::placeholder {
+                        color: #aaa;
+                    }
+
+                }
+
+            }
+
+            // ---------- 주소 인풋
+            .type_addr {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+
+                .post_wrap {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                    
+                    input {
+                        width: 100%;
+                    }
+
+                }
+
+                .detail_addr {
+                    width: 100%;
+
+                    input {
+                        width: 100%;
+                    }
+
+                }
+
+            }
+
+            // ---------- 첨부파일 인풋
+            .type_file {
+
+                .file_container {
+
+                    .file_input_wrap {
+
+                        input[type="file"] {
+                            position: absolute;
+                            width: 1px;
+                            height: 1px;
+                            margin: -1px;
+                            overflow: hidden;
+                            clip: rect(0, 0, 0, 0);
+                            border: 0;
+
+                            &+label{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                cursor: pointer;
+                                user-select: none;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                // 단일 파일
+                &.type_file--t1 {
+                    width: 100%;
+
+                    .file_container {
+                        width: 100%;
+
+                        .file_input_wrap {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            column-gap: 5px;
+
+                            >input[type="text"] {
+                                width: 100%;
+                            }
+
+                        }
+
+                        .file_btn_wrap {
+                            display: flex;
+                            align-items: center;
+                            column-gap: 10px;
+                        }
+
+                    }
+
+                }
+
+                // 다중 파일
+                &.type_file--t2 {
+                    width: 100%;
+
+                    .file_container {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 10px;
+
+                        .file_input_wrap {
+                            display: flex;
+                            align-items: center;
+                            column-gap: 5px;
+                        }
+
+                        .file_input_list{
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 10px;
+
+                            > li{
+                                display: flex;
+                                align-items: center;
+                                column-gap: 10px;
+
+                                .name{
+                                    color: #aaa;
+                                }
+
+                            }
+
+                        }
+
+                        .file_btn_wrap {
+                            display: flex;
+                            align-items: center;
+                            column-gap: 10px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    // ---------- 개인정보, 이용 약관 컨테이너
+    .policy_container{
+        padding-top: 30px;
+
+        .policy_input_wrap{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            column-gap: 30px;
+
+            .policy_btn{
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+
+                img{
+                    max-width: 10px;
+                }
+
+            }
+
+        }
+
+        .policy_contents_wrap{
+            width: 100%;
+            height: 180px;
+            overflow-y: auto;
+            background: #F6F6F6;
+            padding: 30px;
+            margin-top: 20px;
+            display: none;
+
+            .policy_contents{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                color: #aaa;
+                font-size: .9375rem;
+            }
+
+        }
+
+    }
+
+    .submit_container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 80px;
+    }
+
+}
+
+/**************************************** form 끝*/
+
+
+
+
+
+@media screen and (max-width: 1440px) {}
+
+@media screen and (max-width: 1240px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 540px) {}

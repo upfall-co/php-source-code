@@ -1,0 +1,613 @@
+@charset "UTF-8";
+@import url("https://webfontworld.github.io/pretendard/Pretendard.css");
+/**************************************** form 시작*/
+.form__container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.form__container .form_cap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 15px;
+}
+.form__container .form_cap p {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+.form__container .form_cap p span {
+  color: #4169e1;
+}
+.form__container .input_container {
+  border-top: 2px solid #111;
+}
+.form__container .input_wrap {
+  display: grid;
+  grid-template-columns: 1.5fr 8.5fr;
+  border-bottom: 1px solid #CCCCCC;
+}
+.form__container .input_wrap .title, .form__container .input_wrap .title.title_type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding: 0 20px;
+}
+.form__container .input_wrap .title span, .form__container .input_wrap .title.title_type span {
+  display: contents;
+  color: salmon;
+}
+.form__container .input_wrap .title.title_type--upper {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 1.59375rem;
+}
+.form__container .input_wrap .input_btn {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  max-width: 120px;
+  min-width: 120px;
+  width: 100%;
+  height: 55px;
+  border-radius: 5px;
+  border: 2px solid #111111;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.form__container .input_wrap .input_btn:hover {
+  background-color: #111111;
+  color: #fff;
+}
+.form__container .input_wrap .input_cap {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.form__container .input_wrap .input_contents {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px 0;
+}
+.form__container .input_wrap .input_contents input[type=text],
+.form__container .input_wrap .input_contents input[type=tel],
+.form__container .input_wrap .input_contents input[type=email],
+.form__container .input_wrap .input_contents input[type=password],
+.form__container .input_wrap .input_contents input[type=date] {
+  height: 55px;
+  font-size: 1.0625rem;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+}
+.form__container .input_wrap .input_contents input[type=text]::-webkit-input-placeholder, .form__container .input_wrap .input_contents input[type=tel]::-webkit-input-placeholder, .form__container .input_wrap .input_contents input[type=email]::-webkit-input-placeholder, .form__container .input_wrap .input_contents input[type=password]::-webkit-input-placeholder, .form__container .input_wrap .input_contents input[type=date]::-webkit-input-placeholder {
+  color: #aaa;
+}
+.form__container .input_wrap .input_contents input[type=text]::-moz-placeholder, .form__container .input_wrap .input_contents input[type=tel]::-moz-placeholder, .form__container .input_wrap .input_contents input[type=email]::-moz-placeholder, .form__container .input_wrap .input_contents input[type=password]::-moz-placeholder, .form__container .input_wrap .input_contents input[type=date]::-moz-placeholder {
+  color: #aaa;
+}
+.form__container .input_wrap .input_contents input[type=text]:-ms-input-placeholder, .form__container .input_wrap .input_contents input[type=tel]:-ms-input-placeholder, .form__container .input_wrap .input_contents input[type=email]:-ms-input-placeholder, .form__container .input_wrap .input_contents input[type=password]:-ms-input-placeholder, .form__container .input_wrap .input_contents input[type=date]:-ms-input-placeholder {
+  color: #aaa;
+}
+.form__container .input_wrap .input_contents input[type=text]::-ms-input-placeholder, .form__container .input_wrap .input_contents input[type=tel]::-ms-input-placeholder, .form__container .input_wrap .input_contents input[type=email]::-ms-input-placeholder, .form__container .input_wrap .input_contents input[type=password]::-ms-input-placeholder, .form__container .input_wrap .input_contents input[type=date]::-ms-input-placeholder {
+  color: #aaa;
+}
+.form__container .input_wrap .input_contents input[type=text]::placeholder,
+.form__container .input_wrap .input_contents input[type=tel]::placeholder,
+.form__container .input_wrap .input_contents input[type=email]::placeholder,
+.form__container .input_wrap .input_contents input[type=password]::placeholder,
+.form__container .input_wrap .input_contents input[type=date]::placeholder {
+  color: #aaa;
+}
+.form__container .input_wrap .input_contents input[type=text]:-moz-read-only, .form__container .input_wrap .input_contents input[type=tel]:-moz-read-only, .form__container .input_wrap .input_contents input[type=email]:-moz-read-only, .form__container .input_wrap .input_contents input[type=password]:-moz-read-only, .form__container .input_wrap .input_contents input[type=date]:-moz-read-only {
+  background-color: #aaa;
+}
+.form__container .input_wrap .input_contents input[type=text]:disabled, .form__container .input_wrap .input_contents input[type=text]:read-only,
+.form__container .input_wrap .input_contents input[type=tel]:disabled,
+.form__container .input_wrap .input_contents input[type=tel]:read-only,
+.form__container .input_wrap .input_contents input[type=email]:disabled,
+.form__container .input_wrap .input_contents input[type=email]:read-only,
+.form__container .input_wrap .input_contents input[type=password]:disabled,
+.form__container .input_wrap .input_contents input[type=password]:read-only,
+.form__container .input_wrap .input_contents input[type=date]:disabled,
+.form__container .input_wrap .input_contents input[type=date]:read-only {
+  background-color: #aaa;
+}
+.form__container .input_wrap .input_contents select {
+  height: 55px;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  font-size: 1.0625rem;
+}
+.form__container .input_wrap .input_contents select:invalid {
+  color: #aaa;
+}
+.form__container .input_wrap .input_contents select:valid {
+  color: #111;
+}
+.form__container .input_wrap .input_contents select option {
+  color: #111;
+}
+.form__container .input_wrap .input_contents select option[value=""][disabled] {
+  display: none;
+}
+.form__container .input_wrap .input_contents .type_text {
+  width: 100%;
+  position: relative;
+}
+.form__container .input_wrap .input_contents .type_text input[type=text] {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_text .clear {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: none;
+}
+.form__container .input_wrap .input_contents .type_search {
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #E6E6E6;
+}
+.form__container .input_wrap .input_contents .type_search input[type=text] {
+  width: 100%;
+  border: 0;
+}
+.form__container .input_wrap .input_contents .type_search .clear {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: none;
+}
+.form__container .input_wrap .input_contents .type_date {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+.form__container .input_wrap .input_contents .type_date select {
+  max-width: 190px;
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_date input[type=date] {
+  border-radius: 5px;
+  max-width: 525px;
+  width: 100%;
+  height: 55px;
+  background-image: url(/img/date.svg);
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+  position: relative;
+  font-size: 1.0625rem;
+}
+.form__container .input_wrap .input_contents .type_date input[type=date]::-webkit-inner-clear-button, .form__container .input_wrap .input_contents .type_date input[type=date]::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+          appearance: none;
+}
+.form__container .input_wrap .input_contents .type_date input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+.form__container .input_wrap .input_contents .type_radio {
+  width: 100%;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 10px;
+}
+.form__container .input_wrap .input_contents .type_radio input[type=radio] + label {
+  font-size: 1.0625rem;
+  opacity: 1;
+}
+.form__container .input_wrap .input_contents .type_radio.type_radio--g1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.form__container .input_wrap .input_contents .type_radio.type_radio--g2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.form__container .input_wrap .input_contents .type_radio.type_radio--g3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.form__container .input_wrap .input_contents .type_radio.type_radio--g4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.form__container .input_wrap .input_contents .type_radio.type_radio--g5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.form__container .input_wrap .input_contents .type_radio.type_radio--g6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.form__container .input_wrap .input_contents .type_radio.type_radio--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.form__container .input_wrap .input_contents .type_tel {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+}
+.form__container .input_wrap .input_contents .type_tel.type_tel--t1 input[type=tel],
+.form__container .input_wrap .input_contents .type_tel.type_tel--t1 input[type=text] {
+  max-width: 100%;
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_tel.type_tel--t2 input[type=tel],
+.form__container .input_wrap .input_contents .type_tel.type_tel--t2 input[type=text] {
+  max-width: 190px;
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_tel.type_tel--t2 select {
+  max-width: 190px;
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_select {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_select select {
+  max-width: 190px;
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_email {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_email input[type=email],
+.form__container .input_wrap .input_contents .type_email input[type=text] {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_email.type_email--t1 input[type=email],
+.form__container .input_wrap .input_contents .type_email.type_email--t1 input[type=text] {
+  max-width: 100%;
+}
+.form__container .input_wrap .input_contents .type_email.type_email--t2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+}
+.form__container .input_wrap .input_contents .type_email.type_email--t2 > input[type=email],
+.form__container .input_wrap .input_contents .type_email.type_email--t2 > input[type=text] {
+  max-width: 250px;
+}
+.form__container .input_wrap .input_contents .type_email.type_email--t2 .select_wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+}
+.form__container .input_wrap .input_contents .type_email.type_email--t2 .select_wrap > input[type=email],
+.form__container .input_wrap .input_contents .type_email.type_email--t2 .select_wrap > input[type=text] {
+  max-width: 250px;
+}
+.form__container .input_wrap .input_contents .type_email.type_email--t2 .select_wrap select {
+  max-width: 250px;
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_password {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_password input[type=password] {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_password.type_password--t2 {
+  position: relative;
+}
+.form__container .input_wrap .input_contents .type_password.type_password--t2 input[type=text] {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_password.type_password--t2 .pw_show_btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 15px;
+  display: none;
+}
+.form__container .input_wrap .input_contents .type_textarea {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_textarea textarea {
+  width: 100%;
+  height: 260px;
+  font-size: 1.125rem;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+}
+.form__container .input_wrap .input_contents .type_textarea textarea::-webkit-input-placeholder {
+  color: #aaa;
+}
+.form__container .input_wrap .input_contents .type_textarea textarea::-moz-placeholder {
+  color: #aaa;
+}
+.form__container .input_wrap .input_contents .type_textarea textarea:-ms-input-placeholder {
+  color: #aaa;
+}
+.form__container .input_wrap .input_contents .type_textarea textarea::-ms-input-placeholder {
+  color: #aaa;
+}
+.form__container .input_wrap .input_contents .type_textarea textarea::placeholder {
+  color: #aaa;
+}
+.form__container .input_wrap .input_contents .type_addr {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+.form__container .input_wrap .input_contents .type_addr .post_wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+.form__container .input_wrap .input_contents .type_addr .post_wrap input {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_addr .detail_addr {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_addr .detail_addr input {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_file .file_container .file_input_wrap input[type=file] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.form__container .input_wrap .input_contents .type_file .file_container .file_input_wrap input[type=file] + label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.form__container .input_wrap .input_contents .type_file.type_file--t1 {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_file.type_file--t1 .file_container {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_file.type_file--t1 .file_container .file_input_wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+}
+.form__container .input_wrap .input_contents .type_file.type_file--t1 .file_container .file_input_wrap > input[type=text] {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_file.type_file--t1 .file_container .file_btn_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+.form__container .input_wrap .input_contents .type_file.type_file--t2 {
+  width: 100%;
+}
+.form__container .input_wrap .input_contents .type_file.type_file--t2 .file_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+.form__container .input_wrap .input_contents .type_file.type_file--t2 .file_container .file_input_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+}
+.form__container .input_wrap .input_contents .type_file.type_file--t2 .file_container .file_input_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+.form__container .input_wrap .input_contents .type_file.type_file--t2 .file_container .file_input_list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+.form__container .input_wrap .input_contents .type_file.type_file--t2 .file_container .file_input_list > li .name {
+  color: #aaa;
+}
+.form__container .input_wrap .input_contents .type_file.type_file--t2 .file_container .file_btn_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+.form__container .policy_container {
+  padding-top: 30px;
+}
+.form__container .policy_container .policy_input_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+.form__container .policy_container .policy_input_wrap .policy_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+.form__container .policy_container .policy_input_wrap .policy_btn img {
+  max-width: 10px;
+}
+.form__container .policy_container .policy_contents_wrap {
+  width: 100%;
+  height: 180px;
+  overflow-y: auto;
+  background: #F6F6F6;
+  padding: 30px;
+  margin-top: 20px;
+  display: none;
+}
+.form__container .policy_container .policy_contents_wrap .policy_contents {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #aaa;
+  font-size: 0.9375rem;
+}
+.form__container .submit_container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 80px;
+}
+
+/**************************************** form 끝*//*# sourceMappingURL=form.css.map */

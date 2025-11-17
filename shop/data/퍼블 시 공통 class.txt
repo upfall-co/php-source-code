@@ -1,0 +1,26 @@
+장바구니에 담은 상품 갯수 : cartCount
+
+상품 썸네일 : prdThumbnail <a href="<?= shopFoldName ?>/product/detail.php" class="prdThumbnail"><img src="<?= shopFoldName ?>/img/prd1.jpg"></a>
+상품 브랜드 : prdBrand
+상품 명 : prdName
+상품 가격 : prdPrice  <div class="prdPrice"><span>16,000</span>원</div>
+상품 가격(상세 - 단가) : prdUnitPrice  <div class="prdUnitPrice"><span>58,000</span>원</div>
+상품 총 가격 : totalPrice_text <div class="final_price"><span id="totalPrice_text"><?=$_db_TOTAL_PRICE_TEXT?></span>원</div>
+상품 설명 : prdDesc
+상품 배송비 : prdShippingFee
+
+옵션 명 : option_name
+옵션 카운팅 : option_count
+옵션 가격 : option_price
+
+
+<div class="swiper-slide">
+  <a href="<?= shopFoldName ?>/product/detail.php" class="prdThumbnail">
+    <img src="<?= shopFoldName ?>/img/prd1.jpg">
+    <img src="<?= shopFoldName ?>/img/prd2.jpg">
+  </a>
+  <a href="<?= shopFoldName ?>/product/detail.php" class="prdBrand">nike</a>
+  <a href="<?= shopFoldName ?>/product/detail.php" class="prdName">piknic Watering Can piknic Watering Can piknic Watering Can</a>
+  <div class="prdPrice"><span>16,000</span></div>
+</div>
+

@@ -1,0 +1,323 @@
+@import "./baseConfig";
+@import "./customFunc";
+
+/**************************************** idx sec1 시작*/
+
+.idx__s1_container{
+    width: 100%;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+/**************************************** idx sec1 끝*/
+
+
+
+/**************************************** idx sec2 시작*/
+
+.idx__s2_contents_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 35px;
+
+    li{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+
+        &[data-type="EX"]{
+
+            a{
+
+                figure{
+                    padding: 20px;
+                    background-color: #E9E9E9;
+
+                    img{
+                        position: static;
+                        width: auto;
+                        height: 100%;
+                        transform: translate(0, 0);
+                        object-fit: contain;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .title{
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        a{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+
+            figure{
+                width: 100%;
+                aspect-ratio: 1/1;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    @include thumbCenter;
+                }
+
+            }
+
+            .name{
+                font-size: 1.25rem;
+                font-weight: 600;
+                text-align: center;
+                line-height: 1.5;
+            }
+
+        }
+
+    }
+
+}
+
+/**************************************** idx sec2 끝*/
+
+
+
+/**************************************** idx sec3 시작*/
+
+.idx__s3_contents_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+    padding-top: 15px;
+    border-top: 1px solid #000;
+
+    .idx__s3_contents_wrap{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        padding: 70px 30px 70px 0;
+
+        .title_wrap{
+            font-size: 1.375rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+
+            img{
+                max-width: 8px;
+            }
+
+        }
+
+        .info_wrap{
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+
+            li{
+                display: grid;
+                grid-template-columns: 70px 1fr;
+                column-gap: 20px;
+                font-size: 1rem;
+
+                .name{
+                    white-space: nowrap;
+                    font-weight: 700;
+                }
+
+                .contents{
+                    display: flex;
+                    white-space: nowrap;
+                    word-break: keep-all;
+                    column-gap: 10px;
+                    a {
+                        text-decoration: underline;
+                    }
+                }
+
+            }
+
+            &--auto{
+
+                li{
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    column-gap: 30px;
+                    font-size: 1.0625rem;
+                }
+
+            }
+
+        }
+
+        &:first-child{
+            border-right: 1px solid #000;
+        }
+
+    }
+
+}
+
+/**************************************** idx sec3 끝*/
+
+
+
+@media screen and (max-width: 1440px) {
+
+}
+
+@media screen and (max-width: 1240px) {
+
+    .idx__s2_contents_container{
+        column-gap: 20px;
+    }
+
+    .idx__s3_contents_container{
+        column-gap: 30px;
+
+        .idx__s3_contents_wrap{
+            padding: 50px 30px 50px 0;
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .idx__s1_container{
+        height: calc(100vh - 60px);
+    }
+
+    .idx__s2_contents_container{
+
+        li{
+            row-gap: 20px;
+
+            a{
+                row-gap: 20px;
+            }
+
+        }
+
+    }
+
+    .idx__s3_contents_container{
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        padding-top: 30px;
+
+        .idx__s3_contents_wrap{
+            padding: 0 20px;
+
+            &:first-child{
+                border-right: 0;
+                border-bottom: 1px solid #000;
+                padding-bottom: 30px;
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .idx__s1_container{
+        height: calc(100vh - 50px);
+    }
+
+    .idx__s2_contents_container{
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+
+    .idx__s3_contents_container{
+
+        .idx__s3_contents_wrap{
+            padding: 0;
+            row-gap: 20px;
+
+            .title_wrap{
+                font-size: 1.375rem;
+                column-gap: 15px;
+
+                img{
+                    max-width: 8px;
+                }
+
+            }
+
+            .info_wrap{
+
+                li{
+                    grid-template-columns: 1fr;
+                    row-gap: 10px;
+                    font-size: 1.0625rem;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+
+    .idx__s2_contents_container{
+
+        li{
+            row-gap: 15px;
+
+            a{
+                row-gap: 15px;
+
+                .name{
+                    font-size: 1.125rem;
+                }
+
+            }
+
+        }
+
+    }
+
+    .idx__s3_contents_container{
+
+        .idx__s3_contents_wrap{
+
+            .title_wrap{
+                font-size: 1.25rem;
+            }
+
+            .info_wrap{
+
+                li{
+                    font-size: 1rem;
+                }
+
+            }
+
+        }
+
+    }
+
+}

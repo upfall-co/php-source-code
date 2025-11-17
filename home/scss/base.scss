@@ -1,0 +1,189 @@
+@import "./baseConfig";
+@import "./customFunc";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**************************************** base 시작*/
+
+html,
+body {
+    font-size: $baseFontSize;
+    font-family: $baseFontFamily;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: normal;
+    color: $bodyColor;
+    overflow-x: hidden;
+}
+
+body {
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+img {
+    vertical-align: middle;
+    image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
+    max-width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+    border-spacing: 0;
+}
+
+input,
+textarea,
+select {
+    font-family: $baseFontFamily;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+
+    &:focus {
+        outline: 0;
+    }
+
+}
+
+
+
+/**************************************** input 시작*/
+
+input {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &[type="checkbox"],
+    &[type="radio"] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+
+        &+label {
+            display: inline-flex;
+            align-items: center;
+            column-gap: 10px;
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+            opacity: 0.5;
+
+            &::before{
+                content: '';
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid royalblue;
+                border-radius: 100%;
+            }
+
+        }
+
+        &:checked+label{
+            opacity: 1;
+
+            &::before{
+                content: '';
+                background-image: url(/home/img/checkbox__check.svg);
+                background-color: royalblue;
+                background-repeat: no-repeat;
+                background-position: center center;
+                border: 2px solid royalblue;
+            }
+
+        }
+
+    }
+
+}
+
+/**************************************** input 끝*/
+
+
+
+/**************************************** select 시작*/
+
+select {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-image: url(/home/img/select__arrow.svg);
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+}
+
+/**************************************** select 끝*/
+
+
+
+address {
+    font-style: normal;
+}
+
+button {
+    cursor: pointer;
+    font-family: $baseFontFamily;
+    border: 0;
+    background: none;
+    outline: 0;
+    color: inherit;
+}
+
+textarea {
+    resize: none;
+    padding: 15px;
+}
+
+figure {
+    margin: 0;
+}
+
+/**************************************** base 끝*/
+
+
+
+@media screen and (max-width: 1440px) {}
+
+@media screen and (max-width: 1240px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+
+    // html,
+    // body {
+    //     font-size: 13px;
+    // }
+
+}

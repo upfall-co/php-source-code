@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@import url("https://webfontworld.github.io/pretendard/Pretendard.css");
+/**************************************** program 시작*/
+.prog_s1_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 50px;
+}
+
+/**************************************** program 끝*/
+@media screen and (max-width: 768px) {
+  .prog_s1_container {
+    row-gap: 30px;
+  }
+}/*# sourceMappingURL=sub02.css.map */

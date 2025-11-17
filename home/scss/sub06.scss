@@ -1,0 +1,457 @@
+@import "./baseConfig";
+@import "./customFunc";
+
+
+/**************************************** recruit 시작*/
+
+.recr__s1_container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.recr__s1_contents_container {
+    display: grid;
+    grid-template-columns: 2fr 4fr 4fr;
+    column-gap: 60px;
+
+    .recr__s1_depth_container_style{
+        min-height: 600px;
+        padding-top: 50px;
+        
+        &:not(:last-child){
+            border-right: 1px solid $bodyColor;
+        }
+
+    }
+
+    .recr__s1_depth1_container {
+        padding-right: 20px;
+
+        .recr__s1_depth1--pc {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+
+            li {
+                width: fit-content;
+                position: relative;
+                font-size: .9375rem;
+                cursor: pointer;
+
+                // &::after {
+                //     content: '';
+                //     width: 100%;
+                //     height: 1px;
+                //     background-color: #000;
+                //     position: absolute;
+                //     left: 50%;
+                //     bottom: -5px;
+                //     transform: translateX(-50%);
+                //     opacity: 0;
+                // }
+
+                &.active {
+                    font-weight: 700;
+
+                    // &::after {
+                    //     opacity: 1;
+                    // }
+
+                }
+
+            }
+
+        }
+
+        .recr__s1_depth1--mo {
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #000;
+            display: none;
+
+            select {
+                border: 0;
+                font-size: .9375rem;
+                font-weight: 700;
+                padding: 0;
+                background-position: right center;
+                background-size: 14px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+        }
+
+    }
+
+    .recr__s1_depth2_container {
+        padding-right: 20px;
+
+        .recr__s1_depth2 {
+            display: flex;
+            flex-direction: column;
+            row-gap: 35px;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                cursor: pointer;
+
+                .title {
+                    font-size: 1.125rem;
+                    font-weight: 600;
+                }
+
+                .contents {
+                    font-size: .9375rem;
+                    font-weight: 500;
+                }
+
+            }
+
+        }
+
+    }
+
+    .recr__s1_depth3_container {
+
+        .recr__s1_depth3_wrap {
+
+            .recr__s1_depth3 {
+                display: flex;
+                flex-direction: column;
+                row-gap: 40px;
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 15px;
+
+                    .title {
+                        font-size: .9375rem;
+                        font-weight: 700;
+                    }
+
+                    .contents_wrap {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 10px;
+
+                        .contents {
+                            font-size: .9375rem;
+                            font-weight: 500;
+                        }
+
+                        .opt_wrap {
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 5px;
+
+                            li {
+                                font-size: .875rem;
+                            }
+
+                        }
+
+                    }
+
+                    img{
+                        width: auto !important;
+                        height: auto !important;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+/**************************************** recruit 끝*/
+
+
+
+/**************************************** contact 시작*/
+
+.cont__sec1 {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.cont__s1_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 40px;
+}
+
+.cont__s1_contents_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .cont__s1_contents_wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .title_wrap {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+
+            .title {
+                width: fit-content;
+                position: relative;
+                font-size: 1.125rem;
+                font-weight: 700;
+                // text-decoration: underline;
+
+                &::after{
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: $bodyColor;
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                }
+
+            }
+
+            .subtitle {
+                font-size: .9375rem;
+                font-weight: 500;
+            }
+
+        }
+
+        .info_container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            .info_wrap {
+                display: flex;
+                align-items: center;
+                column-gap: 5px;
+
+                li {
+                    font-size: .9375rem;
+                    font-weight: 500;
+                }
+
+            }
+
+            .date_wrap {
+                display: flex;
+                align-items: center;
+                column-gap: 5px;
+
+                li {
+                    font-size: .9375rem;
+                    font-weight: 500;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+/**************************************** contact 끝*/
+
+
+
+@media screen and (max-width: 1440px) {}
+
+@media screen and (max-width: 1240px) {
+
+    /**************************************** recruit res1240 시작*/
+
+    .recr__s1_contents_container {
+        column-gap: 30px;
+
+        .recr__s1_depth_container_style{
+            padding-top: 30px;
+        }
+
+    }
+
+    /**************************************** recruit res1240 끝*/
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    /**************************************** contact res1024 시작*/
+
+    .cont__s1_container {
+        row-gap: 30px;
+    }
+
+    .cont__s1_contents_container {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+        row-gap: 50px;
+    }
+
+    /**************************************** contact res1024 끝*/
+
+
+
+    /**************************************** recruit res1024 시작*/
+
+    .recr__s1_contents_container {
+        column-gap: 20px;
+
+        .recr__s1_depth1_container {
+
+            .recr__s1_depth1--pc {
+                row-gap: 20px;
+            }
+
+        }
+
+        .recr__s1_depth2_container {
+
+            .recr__s1_depth2 {
+                row-gap: 30px;
+            }
+
+        }
+
+        .recr__s1_depth3_container {
+
+            .recr__s1_depth3_wrap {
+
+                .recr__s1_depth3 {
+                    row-gap: 30px;
+                }
+
+            }
+
+        }
+
+    }
+
+    /**************************************** recruit res1024 끝*/
+
+}
+
+@media screen and (max-width: 768px) {
+
+    /**************************************** contact res768 시작*/
+
+    .cont__s1_contents_container {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+
+        .cont__s1_contents_wrap {
+            row-gap: 10px;
+        }
+
+    }
+
+    /**************************************** contact res768 끝*/
+
+
+
+    /**************************************** recruit res768 시작*/
+
+    .recr__s1_container {
+        row-gap: 0;
+    }
+
+    .recr__s1_contents_container {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+
+        .recr__s1_depth_container_style{
+            min-height: auto;
+            padding-top: 0;
+            border-right: 0 !important;
+        }
+
+        .recr__s1_depth1_container {
+            padding-right: 0;
+            
+            .recr__s1_depth1--pc {
+                display: none;
+            }
+
+            .recr__s1_depth1--mo {
+                display: flex;
+                padding-bottom: 0;
+    
+                select {
+                    height: 55px;
+                }
+    
+            }
+
+        }
+
+        .recr__s1_depth2_container {
+            padding-right: 0;
+
+            &.recr__s1_depth_container_style{
+                padding-bottom: 30px;
+                border-bottom: 1px solid #000;
+            }
+
+            .recr__s1_depth2 {
+                row-gap: 20px;
+
+                li{
+
+                    .title {
+                        font-size: 1.0625rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .recr__s1_depth3_container {
+
+            .recr__s1_depth3_wrap {
+
+                .recr__s1_depth3 {
+                    row-gap: 20px;
+
+                    li{
+                        row-gap: 10px;
+
+                        table{
+                            width: 100% !important;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    /**************************************** recruit res768 끝*/
+
+}
+
+@media screen and (max-width: 540px) {}

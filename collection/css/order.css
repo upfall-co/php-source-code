@@ -1,0 +1,164 @@
+#cartDelBtn {width: 120px; height: 45px; font-size: 1.0625em; margin-top: 10px;}
+
+#order .order_section:not(:last-child) {margin-bottom: 100px;}
+#order .order_section.half_section {display: flex; justify-content: space-between;}
+#order .order_section.half_section .half {width: 41.5%; max-width: calc((100% - 200px)/2);}
+.order_title {font-size: 1.0625em; font-weight: 700; margin-bottom: 30px;}
+
+#order .form_label_ani label, #order .form_label_ani input {font-size: 1.0625em;}
+#order .form_label_ani label.label_float {font-size: 0.8125em;}
+#order .form_wrap > li.with_btn .form_label_ani {width: calc(100% - 150px - 10px);}
+#order .form_wrap > li.with_btn button {width: 150px; font-size: 1.0625em;}
+#order .form_wrap > li:not(:last-child) {margin-bottom: 35px;}
+#order .orderer_same_chk {width: fit-content; margin: -50px 0 30px auto;}
+
+#order .agree_chk_wrap {font-size: 1.0625em;}
+#order .agree_chk_wrap li {padding: 20px 0; border-bottom: 1px solid #e6e6e6; position: relative;}
+#order .agree_chk_wrap li .agree_pop_btn {position: absolute; right: 45px; top: 50%; transform: translateY(-50%); color: #aaa; text-decoration: underline; text-underline-offset: 3px; cursor: pointer;}
+#order .popup.find_popup {min-width: 1000px;}
+#order .popup.find_popup .find_txt .sm {max-height: calc(100vh - 130px - 78px - 70px); overflow-y: scroll; text-align: left;}
+#order .popup.find_popup .find_txt .sm h2 {font-size: 1.05em; margin-bottom: 5px;}
+#order .popup.find_popup .find_txt .sm h2:not(:first-child) {margin-top: 30px;}
+#order .popup.find_popup .find_txt .sm a {display: inline-block;}
+#order .popup.find_popup .find_txt .sm::-webkit-scrollbar{width: 4px;}
+#order .popup.find_popup .find_txt .sm::-webkit-scrollbar-track {background-color:#fff;}
+#order .popup.find_popup .find_txt .sm::-webkit-scrollbar-thumb {background-color:#e6e6e6;border-radius: 10px;}
+
+#order .payment_wrap {display: flex; align-items: stretch; column-gap: 10px; font-size: 1.0625em;}
+#order .payment_type {width: 235px;}
+#order .payment_type li:not(:last-child) {margin-bottom: 10px;}
+#order .payment_type li input {display: none;}
+#order .payment_type li input + label {border: 1px solid #e6e6e6; color: rgba(17,17,17,0.75); display: flex; align-items: center; padding-left: 30px; column-gap: 12px; cursor: pointer; height: 80px;}
+#order .payment_type li input:checked + label {border: 1px solid #111; color: #111;}
+#order .payment_cont {width: calc(100% - 235px - 10px); border: 1px solid #e6e6e6; padding: 20px 50px; display: flex; align-items: center;}
+#order .payment_info {width: 100%;}
+#order .payment_info .form_label_ani.just_input {max-width: 630px;}
+#order .payment_info .with_radio {display: flex; margin-top: 50px;}
+#order .payment_info .with_radio > p {width: 100px; color: #aaa; font-size: 1.0625em;}
+#order .payment_info .with_radio .radio_wrap {width: calc(100% - 100px); flex-wrap: wrap;display: flex; align-items: center; column-gap: 50px;}
+#order .payment_info .pay_depth2 {width: 100%; margin-top: 15px; display: none; font-size: 0.9em;}
+#order .payment_info .pay_depth2.chk_tax {margin-top: 0;}
+#order .payment_info .pay_depth3 {margin-top: 15px; padding-left: 30px;}
+#order .payment_info .pay_depth3 > li {display: flex; align-items: baseline;}
+#order .payment_info .pay_depth3 > li:not(:last-child) {margin-bottom: 10px;}
+#order .payment_info .pay_depth3 .lt {width: 120px; color: #aaa;}
+#order .payment_info .pay_depth3 .rt {width: calc(100% - 120px);}
+#order .payment_info .pay_depth3 .rt input {border: 1px solid #e6e6e6; height: 32px; max-width: 100%;}
+#order .payment_info .pay_depth3 .rt input[type="file"] + p {font-size: 0.75em; margin-top: 5px;}
+#order .payment_info select {width: 200px; height: 45px; max-width: calc(100% - 110px); border-bottom: 1px solid #e6e6e6; background: url(../img/help/faq_arrow.png) no-repeat right 10px center; background-size: 24px;}
+
+#orderEnd .order_end_table {display: flex; flex-wrap: wrap; border-top: 1px solid #111;}
+#orderEnd .order_end_table li {width: 100%; display: flex; border-bottom: 1px solid #e6e6e6;}
+#orderEnd .order_end_table li > div {padding: 28px 0 27px;}
+#orderEnd .order_end_table li.half {width: 50%;}
+#orderEnd .order_end_table li .lt {width: 235px; padding-left: 50px; background: #f6f6f6;}
+#orderEnd .order_end_table li .rt {width: calc(100% - 235px); padding-left: 30px;}
+
+
+@media screen and (max-width: 1024px) {
+  #order .popup.find_popup {min-width: 700px;}
+
+  #order .order_section:not(:last-child) {margin-bottom: 80px;}
+  #order .order_section.half_section .half {width: calc((100% - 50px)/2); max-width: none;}
+  .order_title {margin-bottom: 20px;}
+  #order .orderer_same_chk {margin: -18px 0 0 auto;}
+  #order .form_wrap > li:not(:last-child) {margin-bottom: 30px;}
+  #order .form_wrap > li.with_btn .form_label_ani {width: calc(100% - 110px - 10px);}
+  #order .form_wrap > li.with_btn button {width: 110px; font-size: 1em;}
+  #order .payment_type {width: 200px;}
+  #order .payment_type li input + label {height: 70px; padding-left: 25px;}
+  #order .payment_type li input + label img {width: 26px;}
+  #order .payment_cont {width: calc(100% - 200px - 10px); padding: 25px 30px;}
+  #order .payment_info .with_radio {margin-top: 40px; flex-direction: column; row-gap: 15px;}
+  #order .payment_info .with_radio .radio_wrap {column-gap: 40px;}
+  #order .payment_info .with_radio .pay_depth2 .radio_wrap {column-gap: 30px;}
+  #order .payment_info .pay_depth3 {padding-left: 28px;}
+  #order .payment_info select {max-width: calc(100% - 100px);}
+
+  #orderEnd .sub_title {font-size: 2.5em;}
+  #orderEnd .order_end_table li > div {padding: 25px 0 22px;}
+  #orderEnd .order_end_table li.half {width: 50%;}
+  #orderEnd .order_end_table li .lt {width: 160px; padding-left: 30px;}
+  #orderEnd .order_end_table li .rt {width: calc(100% - 160px); padding-left: 20px;}
+}
+
+@media screen and (max-width: 768px) {
+  #order .popup.find_popup {min-width: calc(100% - 40px);}
+
+  #order .order_section:not(:last-child) {margin-bottom: 70px;}
+  #order .order_section.half_section .half {width: calc((100% - 30px)/2); max-width: none;}
+  #order .orderer_same_chk {margin: -16px 0 0 auto;}
+  #order .form_wrap > li:not(:last-child) {margin-bottom: 20px;}
+  #order .form_wrap > li.with_btn .form_label_ani {width: calc(100% - 80px - 10px);}
+  #order .form_wrap > li.with_btn button {width: 80px; font-size: 1em;}
+  #order .agree_chk_wrap {font-size: 1em;}
+  #order .agree_chk_wrap li {padding: 17px 0;}
+  #order .agree_chk_wrap li .agree_pop_btn {right: 20px;}
+  #order .payment_wrap {flex-direction: column; row-gap: 10px;}
+  #order .payment_type {width: 100%; display: flex; column-gap: 10px;}
+  #order .payment_type li {width: calc((100% - 20px)/3);}
+  #order .payment_type li input + label {height: 60px; justify-content: center; padding-left: 0;}
+  #order .payment_type li:not(:last-child) {margin: 0;}
+  #order .payment_type li input + label img {width: 23px;}
+  #order .payment_cont {width: 100%; padding: 20px 30px;}
+  #order .payment_info .with_radio {margin-top: 30px; flex-direction: column; row-gap: 15px;}
+  #order .payment_info .with_radio .radio_wrap {column-gap: 30px; width: 100%;}
+  #order .payment_info .with_radio .pay_depth2 .radio_wrap {column-gap: 30px;}
+  #order .payment_info .pay_depth2 {font-size: 1em;}
+  #order .payment_info .pay_depth3 {padding-left: 26px;}
+  #order .payment_info select {width: 180px; max-width: calc(100% - 80px); height: 40px; background-size: 21px;}
+
+  #cartDelBtn {width: 100px; height: 40px;}
+  .btn_wrap *.w_500 {width: 350px; height: 55px;}
+  .btn_wrap *.w_300 {height: 50px;}
+
+  #orderEnd .sub_title {font-size: 2.325em;}
+  #orderEnd .order_end_table li > div {padding: 22px 0 20px;}
+  #orderEnd .order_end_table li.half {width: 100%;}
+  #orderEnd .order_end_table li .lt {width: 150px;}
+  #orderEnd .order_end_table li .rt {width: calc(100% - 150px);}
+}
+
+@media screen and (max-width: 540px) {
+  #order .popup.find_popup .find_txt .sm {min-height: 320px; max-height: calc(100vh - 115px - 46px - 10vh);}
+
+  .order_title {margin-bottom: 15px;}
+  #order .order_section:not(:last-child) {margin-bottom: 50px;}
+  #order .order_section.half_section {flex-wrap: wrap; row-gap: 50px;}
+  #order .order_section.half_section .half {width: 100%;}
+
+  #order .form_wrap > li:not(:last-child) {margin-bottom: 18px;}
+  #order .form_wrap > li.with_btn .form_label_ani {width: calc(100% - 70px - 10px);}
+  #order .form_wrap > li.with_btn button {width: 70px;}
+  #order .agree_chk_wrap li {padding: 15px 0;}
+  #order .agree_chk_wrap li .agree_pop_btn {position: static; margin: 3px 0 0 auto; width: fit-content; font-size: 12px; transform: none;}
+
+  #order .payment_type li input + label {height: 60px; flex-direction: column; row-gap: 6px;}
+  #order .payment_type li input + label img {width: 18px; height: 15px;}
+  #order .payment_cont {padding: 20px 20px;}
+  #order .payment_info .with_radio {margin-top: 30px; row-gap: 15px;}
+  #order .payment_info .with_radio .radio_wrap {column-gap: 20px; row-gap: 10px;}
+  #order .payment_info .with_radio .radio_wrap .input_radio input + label {column-gap: 7px;}
+  #order .payment_info .with_radio .pay_depth2 .radio_wrap {column-gap: 20px;}
+  #order .payment_info .pay_depth2 {margin-top: 12px;}
+  #order .payment_info .pay_depth3 {padding-left: 0;}
+  #order .payment_info .pay_depth3 .lt {width: 100px;}
+  #order .payment_info .pay_depth3 .rt {width: calc(100% - 100px);}
+  #order .payment_info .pay_depth3 .rt input {width: 100%;}
+  #order .payment_info select {width: 100%; max-width: none; height: 40px; background-size: 18px;}
+
+  #cartDelBtn {width: 70px; height: 30px; font-size: 12px;}
+  .btn_wrap {margin: 40px auto 0;}
+  .btn_wrap *.w_500 {height: 52px; font-size: 1.125em;}
+  .btn_wrap *.w_300 {height: 45px; font-size: 1.111em;}
+
+  #orderEnd .sub_title {font-size: 2.125em;}
+  #orderEnd .order_end_table li > div {padding: 18px 0 15px;}
+  #orderEnd .order_end_table li.half {width: 100%;}
+  #orderEnd .order_end_table li .lt {width: 110px; padding-left: 20px;}
+  #orderEnd .order_end_table li .rt {width: calc(100% - 110px); padding-left: 15px;}
+}
+
+@media screen and (max-width: 414px) {
+
+}

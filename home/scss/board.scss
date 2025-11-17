@@ -1,0 +1,1172 @@
+@import "./baseConfig";
+@import "./customFunc";
+
+/**************************************** board 공통 시작*/
+
+.b_list__container {
+
+    .b_list__head {
+        display: grid;
+        padding: 20px 0;
+        border-bottom: 1px solid #e6e6e6;
+
+        >div {
+            font-size: 1.0625rem;
+            font-weight: 700;
+        }
+
+    }
+
+    .b_list__wrap {
+
+        .b_list__contents {
+            display: grid;
+            padding: 30px 0;
+            border-bottom: 1px solid #e6e6e6;
+
+            .num {
+                font-size: 1.0625rem;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            .date {
+                font-size: 1.0625rem;
+                font-weight: 500;
+                text-align: center;
+
+                &.date--grey {
+                    color: #888;
+                    font-weight: 400;
+                }
+
+            }
+
+            .title {
+                font-size: 1.125rem;
+                font-weight: 500;
+            }
+
+            .author {
+                font-size: 1.0625rem;
+                text-align: center;
+                color: #888;
+            }
+
+        }
+
+    }
+
+}
+
+/**************************************** board 공통 끝*/
+
+
+
+/**************************************** board type1(일반형) 시작*/
+
+.b_list__container {
+
+    &.b_list__container--t1 {
+
+        .b_list__head {
+            grid-template-columns: 1.8fr 6.4fr 1.8fr;
+            column-gap: 30px;
+            justify-items: center;
+        }
+
+        .b_list__wrap {
+            margin-bottom: 50px;
+
+            .b_list__contents {
+                grid-template-columns: 1.8fr 6.4fr 1.8fr;
+                column-gap: 30px;
+                overflow: hidden;
+
+                .title_wrap {
+                    width: 100%;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 15px;
+
+                    .title {
+                        cursor: pointer;
+                        @include txtEllipsis;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+/**************************************** board t1 끝*/
+
+
+
+/**************************************** board type2(비밀번호 입력형) 시작*/
+
+.b_list__container {
+
+    &.b_list__container--t2 {
+
+        .b_list__head {
+            grid-template-columns: 1.8fr 6.4fr 1.8fr;
+            column-gap: 30px;
+            justify-items: center;
+        }
+
+        .b_list__wrap {
+            margin-bottom: 50px;
+
+            .b_list__contents {
+                grid-template-columns: 1.8fr 6.4fr 1.8fr;
+                column-gap: 30px;
+                overflow: hidden;
+
+                .title_wrap {
+                    width: 100%;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 15px;
+
+                    .title {
+                        cursor: pointer;
+                        @include txtEllipsis;
+                        transition: 0.4s;
+
+                        &:hover {
+                            color: $pointColor;
+                        }
+
+                    }
+
+                    .password_container {
+                        display: none;
+                    }
+
+                    .password_wrap {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        column-gap: 5px;
+
+                        figure {
+                            min-width: 10px;
+                        }
+
+                        .input_wrap {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            column-gap: 5px;
+
+                            input[type="password"] {
+                                max-width: 220px;
+                                width: 100%;
+                                height: 40px;
+                                font-size: .9375rem;
+                                border-radius: 5px;
+                                border: 1px solid #E6E6E6;
+                                padding: 0 15px;
+
+                                &::placeholder {
+                                    color: $greyLine;
+                                }
+
+                            }
+
+                            .btn_wrap {
+                                display: flex;
+                                align-items: center;
+                                column-gap: 5px;
+
+                                .b__password_btn {
+                                    border-radius: 5px;
+                                    min-width: 50px;
+                                    height: 40px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: .9375rem;
+                                    font-weight: 500;
+                                    text-align: center;
+
+                                    &.b__password_btn--y {
+                                        background-color: #222;
+                                        color: #fff;
+                                    }
+
+                                    &.b__password_btn--n {
+                                        border: 1px solid #e6e6e6;
+                                        color: #888;
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+/**************************************** board t2 끝*/
+
+
+
+/**************************************** gallery(섬네일형) 시작*/
+
+.gall__container {
+    display: grid;
+
+    &--t1 {
+        @extend .gall__container;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 50px;
+        row-gap: 50px;
+
+        li {
+            aspect-ratio: 13/19;
+            width: 100%;
+            overflow: hidden;
+
+            .thumb_container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                figure {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    overflow: hidden;
+
+                    img {
+                        @include thumbCenter;
+                    }
+
+                }
+
+                .info_container {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 101%;
+                    height: 101%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    row-gap: 40px;
+                    background-color: rgba($color: #fff, $alpha: 0.95);
+                    z-index: 5;
+                    display: none;
+                    padding: 0 20px;
+
+                    .title_wrap {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        row-gap: 15px;
+                        text-align: center;
+
+                        .title {
+                            font-size: 1.5625rem;
+                            font-weight: 600;
+                            word-break: keep-all;
+                        }
+
+                        .subtitle {
+                            font-size: 1.5625rem;
+                            font-weight: 500;
+                            word-break: keep-all;
+                        }
+
+                    }
+
+                    .date_wrap {
+                        width: 100%;
+
+                        .date {
+                            font-size: 1.125rem;
+                            font-weight: 500;
+                            word-break: keep-all;
+                            text-align: center;
+                        }
+
+                    }
+
+                    .btn_wrap {
+                        width: 100%;
+
+                        a,p {
+                            max-width: 110px;
+                            width: 100%;
+                            height: 30px;
+                            margin: 0 auto;
+                            border: 1px solid #000;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+                            transform: translateY(-1px);
+
+                            &[data-state="now on"] {
+                                background-color: #000;
+                                color: #fff;
+                            }
+
+                            &::after {
+                                content: attr(data-state);
+                                transform: translateY(-1px)
+                            }
+
+                        }
+
+                    }
+
+
+                }
+
+            }
+
+        }
+
+    }
+
+    &--t2 {
+        @extend .gall__container;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 35px;
+        row-gap: 50px;
+
+        li {
+            overflow: hidden;
+
+            &[data-type="EX"]{
+
+                .thumb_container {
+    
+                    figure {
+                        padding: 20px;
+                        background-color: #E9E9E9;
+    
+                        img {
+                            position: static;
+                            width: auto;
+                            height: 100%;
+                            transform: translate(0, 0);
+                            object-fit: contain;
+                        }
+    
+                    }
+    
+                }
+
+            }
+
+            .thumb_container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+
+                figure {
+                    aspect-ratio: 1/1;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    overflow: hidden;
+                    transition: 0.4s;
+
+                    img {
+                        @include thumbCenter;
+                    }
+
+                }
+
+                .title_wrap {
+                    width: 100%;
+
+                    p {
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                        line-height: 1.5;
+                    }
+
+                }
+
+            }
+
+            &:hover {
+
+                .thumb_container {
+
+                    figure {
+                        filter: grayscale(0);
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    // &--hover {
+    //     @extend .gall__container;
+
+    //     li {
+
+    //         .thumb_container {
+
+    //             figure {
+    //                 filter: grayscale(1);
+    //             }
+
+    //         }
+
+    //         &:hover {
+
+    //             .thumb_container {
+
+    //                 figure {
+    //                     filter: grayscale(0);
+    //                 }
+
+    //             }
+
+    //         }
+
+    //     }
+
+    // }
+
+}
+
+/**************************************** gallery 끝*/
+
+
+
+/**************************************** board_view 공통 시작*/
+
+.b_view__s1_container {
+
+    &[data-type="1"] {
+        width: 100%;
+        height: calc(100vh - 80px);
+        overflow: hidden;
+    }
+
+}
+
+.b_view__s2_container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+
+    .info_container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 100px;
+        padding: 50px 0;
+        border-bottom: 1px solid #000;
+
+        .title_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 75px;
+
+            .title_wrap {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+
+                .title {
+                    font-size: 1.5625rem;
+                    font-weight: 700;
+                }
+
+                .date {
+                    font-size: 1.125rem;
+                }
+
+            }
+
+            .btn_wrap {
+                width: 100%;
+
+                >a {
+                    width: 55px;
+                    height: 55px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 100%;
+                    background-color: #000;
+                    position: relative;
+
+                    &::after {
+                        content: "booking";
+                        position: absolute;
+                        top: 50%;
+                        right: calc(-100% - 55px - 10px);
+                        transform: translate(-10px, -50%);
+                        width: 100px;
+                        padding: 5px 0;
+                        // height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        border: 1.5px solid #000;
+                        font-size: 1.125rem;
+                        font-weight: 600;
+                        opacity: 0;
+                    }
+
+                    &:hover {
+
+                        &::after {
+                            opacity: 1;
+                            transform: translate(0, -50%);
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .info_wrap {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+
+            .subtitle_wrap {
+
+                p {
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    line-height: 1.5;
+                }
+
+            }
+
+            .contents_wrap {
+
+                p {
+                    font-size: 1.0625rem;
+                    line-height: 1.5;
+                    word-break: keep-all;
+                }
+
+            }
+
+        }
+
+    }
+
+    .relate_container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 95px;
+
+        .relate_wrap {
+            display: flex;
+            flex-direction: column;
+            row-gap: 45px;
+        }
+
+        .back_list_container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .back_btn {
+                font-size: .9375rem;
+                font-weight: 600;
+                text-align: center;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: -5px;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    height: 1px;
+                    background-color: #000;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+/**************************************** board_view 공통 끝*/
+
+
+
+/**************************************** faq 시작*/
+
+.faq__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid #222;
+
+    .faq__wrap {
+        width: 100%;
+        border-bottom: 1px solid #e6e6e6;
+
+        .ques_container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 30px;
+            padding: 25px 20px;
+            cursor: pointer;
+
+            .title_wrap {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                column-gap: 10px;
+                overflow: hidden;
+
+                .ques {
+                    font-size: 1.25rem;
+                    white-space: nowrap;
+                }
+
+                .contents {
+                    font-size: 1.0625rem;
+                    font-weight: 500;
+                }
+
+            }
+
+            >button {
+                min-width: 20px;
+            }
+
+        }
+
+        .answ_container {
+            background-color: #f6f6f6;
+            padding: 25px 20px;
+            display: none;
+
+            .answ_wrap {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                column-gap: 10px;
+
+                .answ {
+                    font-size: 1.25rem;
+                    white-space: nowrap;
+                }
+
+                .contents_wrap {
+                    font-size: .9375rem;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+/**************************************** faq 끝*/
+
+
+
+@media screen and (max-width: 1440px) {}
+
+@media screen and (max-width: 1240px) {
+
+    /**************************************** board_view 공통 res768 시작*/
+
+    .b_view__s2_container {
+
+        .info_container {
+            column-gap: 50px;
+
+            .title_container {
+                row-gap: 50px;
+            }
+
+        }
+
+    }
+
+    /**************************************** board_view 공통 res768 끝*/
+
+
+
+    /**************************************** gallery res1240 시작*/
+
+    .gall__container {
+
+        &--t1 {
+            column-gap: 20px;
+
+            li {
+
+                .thumb_container {
+
+                    .info_container {
+                        row-gap: 30px;
+
+                        .title_wrap {
+
+                            .title {
+                                font-size: 1.375rem;
+                            }
+
+                            .subtitle {
+                                font-size: 1.375rem;
+                            }
+
+                        }
+
+                        .date_wrap {
+
+                            .date {
+                                font-size: 1.0625rem;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        &--t2 {
+            column-gap: 20px;
+
+            li {
+
+                .thumb_container {
+                    row-gap: 20px;
+                }
+    
+            }
+
+        }
+
+    }
+
+    /**************************************** gallery res1240 끝*/
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    /**************************************** gallery res1024 시작*/
+
+    .gall__container {
+
+        &--t1 {
+            column-gap: 20px;
+
+            li {
+                aspect-ratio: auto;
+
+                .thumb_container {
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+
+                    figure {
+                        aspect-ratio: 13/19;
+                        height: auto;
+                    }
+
+                    .info_container {
+                        position: static;
+                        transform: translate(0, 0);
+                        display: flex;
+                        row-gap: 20px;
+                        padding: 0;
+
+                        .title_wrap {
+                            align-items: flex-start;
+                            text-align: start;
+                            row-gap: 10px;
+
+                            .title {
+
+                                br {
+                                    display: none;
+                                }
+
+                            }
+
+                        }
+
+                        .date_wrap {
+
+                            .date {
+                                text-align: start;
+                            }
+
+                        }
+
+                        .btn_wrap {
+
+                            a,p {
+                                margin: 0;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        &--hover {
+    
+            li {
+    
+                .thumb_container {
+    
+                    figure {
+                        filter: grayscale(0);
+                    }
+    
+                }
+    
+            }
+    
+        }
+
+    }
+
+    /**************************************** gallery res1024 끝*/
+
+
+
+    /**************************************** board_view 공통 res1024 시작*/
+
+    .b_view__s1_container {
+
+        &[data-type="1"] {
+            height: calc(100vh - 60px);
+        }
+
+    }
+
+    .b_view__s2_container {
+
+        .info_container {
+            grid-template-columns: 1fr;
+            row-gap: 50px;
+
+            .title_container {
+                row-gap: 30px;
+
+                .title_container {
+
+                    .title_wrap {
+
+                        .title {
+                            font-size: 1.375rem;
+                        }
+
+                        .date {
+                            font-size: 1.0625rem;
+                        }
+
+                    }
+
+                }
+
+                .btn_wrap {
+
+                    >a {
+                        width: 50px;
+                        height: 50px;
+
+                        &::after {
+                            right: calc(-100% - 50px - 10px);
+                            transform: translate(0, -50%);
+                            font-size: 1.0625rem;
+                            opacity: 1;
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .info_wrap {
+
+                .subtitle_wrap {
+
+                    p {
+                        font-size: 1.125rem;
+                    }
+
+                }
+
+                .contents_wrap {
+
+                    p {
+                        font-size: 1.0625rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    /**************************************** board_view 공통 res1024 끝*/
+
+}
+
+@media screen and (max-width: 768px) {
+
+    /**************************************** board_view 공통 res768 시작*/
+
+    .b_view__s1_container {
+
+        &[data-type="1"] {
+            height: calc(100vh - 50px);
+        }
+
+    }
+
+    .b_view__s2_container{
+
+        .relate_container {
+            row-gap: 50px;
+    
+            .relate_wrap {
+                row-gap: 30px;
+            }
+    
+        }
+
+    }
+
+    /**************************************** board_view 공통 res768 끝*/
+
+
+
+    /**************************************** gallery res768 시작*/
+
+    .gall__container {
+
+        &--t1 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &--t2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+    /**************************************** gallery res768 끝*/
+
+}
+
+@media screen and (max-width: 540px) {
+
+    /**************************************** gallery res540 시작*/
+
+    .gall__container {
+
+        &--t1 {
+            grid-template-columns: 1fr;
+
+            li {
+                overflow: visible;
+
+                .thumb_container {
+
+                    .info_container {
+                        row-gap: 15px;
+
+                        .title_wrap {
+
+                            .title {
+                                font-size: 1.25rem;
+                            }
+
+                            .subtitle {
+                                font-size: 1.25rem;
+                            }
+
+                        }
+
+                        .date_wrap {
+
+                            .date {
+                                font-size: 1rem;
+                            }
+
+                        }
+
+                        .btn_wrap {
+                            display: flex;
+                            justify-content: flex-end;
+
+                            a,p {
+                                max-width: none;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+
+        }
+
+        &--t2 {
+            grid-template-columns: 1fr;
+
+            li {
+
+                .thumb_container{
+                    row-gap: 15px;
+                }
+                
+            }
+
+        }
+
+    }
+
+    /**************************************** gallery res540 끝*/
+
+
+
+    /**************************************** board_view 공통 res540 시작*/
+
+    .b_view__s2_container {
+
+        .info_container {
+            row-gap: 30px;
+
+            .title_container {
+                row-gap: 20px;
+
+                .title_container {
+
+                    .title_wrap {
+
+                        .title {
+                            font-size: 1.25rem;
+                        }
+
+                        .date {
+                            font-size: 1rem;
+                        }
+
+                    }
+
+                }
+
+                .btn_wrap {
+
+                    >a {
+                        width: 40px;
+                        height: 40px;
+
+                        &::after {
+                            right: calc(-100% - 70px);
+                            font-size: 1rem;
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .info_wrap {
+
+                .subtitle_wrap {
+
+                    p {
+                        font-size: 1.0625rem;
+                    }
+
+                }
+
+                .contents_wrap {
+
+                    p {
+                        font-size: 1rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    /**************************************** board_view 공통 res540 끝*/
+
+}

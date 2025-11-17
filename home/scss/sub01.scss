@@ -1,0 +1,35 @@
+@import "./baseConfig";
+@import "./customFunc";
+
+
+/**************************************** exhibition 시작*/
+
+.exh__s1_container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+/**************************************** exhibition 끝*/
+
+
+
+@media screen and (max-width: 1440px) {
+
+}
+
+@media screen and (max-width: 1240px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 540px) {
+
+}

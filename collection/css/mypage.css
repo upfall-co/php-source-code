@@ -1,0 +1,156 @@
+#loginBtn, #joinBtn, #goOrderHistoryBtn {font-size: 1.25em; height: 60px;}
+#loginBtn {margin: 50px 0 30px;}
+#joinBtn {margin-top: 80px;}
+#goOrderHistoryBtn {margin-top: 50px;}
+#login .sub_title,
+#join .sub_title {margin-bottom: 100px;}
+#login .find_wrap {display: flex; align-items: center; justify-content: flex-end;}
+#login .find_wrap li {font-size: 0.9375em; cursor: pointer; transition: opacity .3s;}
+#login .find_wrap li:hover {opacity: 0.75;}
+#login .find_wrap li:not(:last-child) {display: flex; align-items: center;}
+#login .find_wrap li:not(:last-child)::after {content: ""; display: block; width: 1px; height: 13px; background: #e6e6e6; margin: 0 15px;}
+#login .social_wrap {display: flex; column-gap: 10px; margin-top: 30px;}
+#login .social_wrap > a {width: calc((100% - 10px)/2); height: 55px; display: flex; align-items: center; justify-content: center; column-gap: 8px; font-weight: 500;}
+#login .social_wrap > a.naver {background: rgb(3,199,90); color: #fff;}
+#login .social_wrap > a.kakao {background: #FEE500; color: rgb(0, 0, 0, 0.85);}
+#login .loing_bt_wrap .join_row {margin: 100px 0 30px; display: flex; align-items: center; justify-content: center; column-gap: 50px;}
+#login .loing_bt_wrap .join_row p {font-size: 1.125em; color: #aaa;}
+#login .loing_bt_wrap .join_row a {font-size: 1.0625em; width: 150px; height: 45px;}
+#login .loing_bt_wrap #orderHistoryBtn {height: 45px; font-size: 1.0625em;}
+
+#mypage .right_btn_wrap {margin-bottom: 30px; height: 45px;}
+#mypage .right_btn_wrap > form {display: flex; justify-content: flex-end; align-items: center; column-gap: 10px;}
+#mypage .right_btn_wrap * {height: 100%;}
+#mypage .right_btn_wrap .date_wrap {width: 260px; border-bottom: 1px solid #e6e6e6; display: flex; align-items: center;}
+#mypage .right_btn_wrap .date_wrap span {height: auto; margin: 0 5px;}
+#mypage .right_btn_wrap .date_wrap input[type="date"] {background: transparent; cursor: pointer; width: 120px;}
+#mypage .right_btn_wrap .date_wrap input[type="date"]::before {display: none;}
+#mypage .right_btn_wrap .date_wrap input[type="date"]::-webkit-calendar-picker-indicator{
+  margin-left: 0px;
+}
+#mypage .right_btn_wrap .date_wrap input[type="date"]:valid::before {display: none;}
+#mypage .right_btn_wrap .black_btn {width: 120px; font-size: 1.0625em;}
+
+#mypage.edit .half_section {display: flex; justify-content: space-between; margin-top: 75px;}
+#mypage.edit .half_section .half {width: 43%; max-width: calc((100% - 200px)/2);}
+#mypage.edit .half_section .edit_title {font-size: 1.0625em; font-weight: 700; margin-bottom: 50px;}
+#mypage.edit .half_section #pwChangeBtn {margin-top: 50px; width: 100%; height: 60px;}
+#mypage.edit .half_section .form_label_ani label.label_float {font-size: inherit;}
+
+#mypage .edit_btn_wrap {position: relative; margin: 100px auto 0; display: flex; justify-content: center; width: 100%;}
+#mypage.withdraw .edit_btn_wrap {position: relative; margin: 80px auto 0;}
+#mypage.withdraw .edit_btn_wrap {margin-top: 35px; display: flex; justify-content: center; align-items: center; column-gap: 10px;}
+#mypage.withdraw .edit_btn_wrap .border_btn {width: 200px; max-width: 50%; height: 50px; column-gap: 10px; font-size: 1em;}
+#mypage.withdraw .edit_btn_wrap .border_btn[onclick="naverLogin();"] {background: rgb(3,199,90); color: #fff;border: 0;}
+#mypage.withdraw .edit_btn_wrap .border_btn[onclick="kakaoLogin();"] {background: #FEE500; color: rgb(0, 0, 0, 0.85);border: 0;}
+
+#mypage .edit_btn_wrap .w_500 {width: 500px; height: 60px; max-width: calc(100% - 150px);}
+#mypage .edit_btn_wrap #withdrawBtn {position: absolute; right: 0; top: 50%; transform: translateY(-50%); color: #aaa; text-decoration: underline; text-underline-offset: 3px;}
+
+#mypage.withdraw .withdraw_wrap .withdraw_notice {padding: 50px 100px; background: #f6f6f6;}
+#mypage.withdraw .withdraw_wrap .withdraw_notice .bold {font-weight: 600; margin-bottom: 45px;}
+#mypage.withdraw .withdraw_wrap .withdraw_notice ul {opacity: 0.75; line-height: 152%; letter-spacing: -0.5px; list-style: "-  "; padding-left: 10px;}
+#mypage.withdraw .withdraw_wrap .withdraw_notice ul li:not(:last-child) {margin-bottom: 25px;}
+#mypage.withdraw .withdraw_reason {margin: 80px auto 0; max-width: 630px; display: flex; flex-direction: column; align-items: flex-end;}
+#mypage.withdraw .withdraw_reason .flex {display: flex; justify-content: center; align-items: center;}
+#mypage.withdraw .withdraw_reason .etc_hidden {display: none; width: calc(100% - 110px); margin-top: 20px; border-bottom: 1px solid #e6e6e6; height: 45px;}
+#mypage.withdraw .withdraw_reason span {opacity: 0.75; width: 110px;}
+#mypage.withdraw .withdraw_reason select {width: 520px; height: 45px; max-width: calc(100% - 110px); border-bottom: 1px solid #111; background: url(../img/help/faq_arrow.png) no-repeat right 10px center; background-size: 24px;}
+
+
+
+@media screen and (max-width: 1024px) {
+  #mypage.edit .half_section .half {width: calc((100% - 50px)/2); max-width: none;}
+  #mypage.edit .half_section #pwChangeBtn {height: 55px;}
+  #mypage.edit .half_section .edit_title {margin-bottom: 40px;}
+
+  #mypage.withdraw .withdraw_wrap .withdraw_notice {padding: 50px 50px;}
+  #mypage.withdraw .withdraw_wrap .withdraw_notice .bold {margin-bottom: 40px;}
+  #mypage.withdraw .withdraw_wrap .withdraw_notice ul li:not(:last-child) {margin-bottom: 20px;}
+  #mypage.withdraw .withdraw_reason {margin: 70px auto 0; max-width: 520px;}
+  #mypage.withdraw .withdraw_reason .etc_hidden {width: calc(100% - 100px);}
+  #mypage.withdraw .withdraw_reason span {width: 100px;}
+  #mypage.withdraw .withdraw_reason select {width: 420px; max-width: calc(100% - 100px);}
+}
+
+@media screen and (max-width: 768px) {
+  #loginBtn, #joinBtn, #orderHistoryBtn {height: 55px; font-size: 1.2em;}
+  #loginBtn {margin: 40px 0 20px;}
+  #login .find_wrap li:not(:last-child)::after {margin: 0 12px;}
+  #login .loing_bt_wrap .join_row {margin: 80px 0 25px; column-gap: 30px}
+  #login .loing_bt_wrap .join_row p {font-size: 1.05em;}
+  #login .loing_bt_wrap .join_row a {width: 130px; height: 42px; font-size: 1em;}
+  #login .social_wrap {margin-top: 25px;}
+  #login .social_wrap > a {height: 45px;}
+  #login .loing_bt_wrap #orderHistoryBtn {height: 42px; font-size: 1em;}
+  
+  #joinBtn {margin-top: 60px;}
+  #login .sub_title,
+  #join .sub_title {margin-bottom: 60px;}
+  #goOrderHistoryBtn {margin-top: 40px;}
+
+  #mypage .right_btn_wrap {height: 42px}
+  #mypage .right_btn_wrap .black_btn {width: 100px;}
+  #mypage .right_btn_wrap .date_wrap {width: 240px;}
+  #mypage .right_btn_wrap .date_wrap input[type="date"] {width: 110px;}
+
+  #mypage.edit .half_section {margin-top: 50px;}
+  #mypage.edit .half_section {flex-wrap: wrap; row-gap: 70px;}
+  #mypage.edit .half_section .half {width: 100%;}
+  #mypage.edit .half_section .edit_title {margin-bottom: 30px;}
+  #mypage.edit .half_section #pwChangeBtn {margin-top: 30px; height: 50px;}
+  #mypage .edit_btn_wrap .w_500 {height: 55px;}
+
+  #mypage.withdraw .withdraw_wrap .withdraw_notice {padding: 40px 30px;}
+  #mypage.withdraw .withdraw_wrap .withdraw_notice .bold {margin-bottom: 25px;}
+  #mypage.withdraw .withdraw_wrap .withdraw_notice ul li:not(:last-child) {margin-bottom: 15px;}
+  #mypage.withdraw .withdraw_reason {margin: 40px auto 0; max-width: 430px;}
+  #mypage.withdraw .withdraw_reason .etc_hidden {width: calc(100% - 80px);}
+  #mypage.withdraw .edit_btn_wrap .border_btn {height: 45px;}
+  #mypage.withdraw .withdraw_reason span {width: 80px;}
+  #mypage.withdraw .withdraw_reason select {width: 350px; max-width: calc(100% - 80px); height: 40px; background-size: 21px;}
+}
+
+@media screen and (max-width: 540px) {
+  #loginBtn, #joinBtn, #goOrderHistoryBtn {height: 50px;}
+  #loginBtn {margin: 35px 0 15px;}
+  #login .find_wrap li:not(:last-child)::after {margin: 0 10px;}
+  #login .loing_bt_wrap .join_row {margin: 60px 0 20px; column-gap: 20px}
+  #login .loing_bt_wrap .join_row p {font-size: 1em;}
+  #login .loing_bt_wrap .join_row a {width: 120px; height: 40px; font-size: 1.05em;}
+  #login .social_wrap {flex-direction: column; row-gap: 7px;}
+  #login .social_wrap > a {width: 100%; height: 45px; font-size: 1.111em;}
+  #login .social_wrap > a > img {max-height: 15px;}
+  #login .loing_bt_wrap #orderHistoryBtn {height: 40px; font-size: 1.05em;}
+  
+  #joinBtn {margin-top: 50px;}
+  #login .sub_title,
+  #join .sub_title {margin-bottom: 40px;}
+  #goOrderHistoryBtn {margin-top: 35px;}
+
+  #mypage .right_btn_wrap {height: 33px; margin-bottom: 20px;}
+  #mypage .right_btn_wrap .black_btn {width: 70px; font-size: 1em;}
+  #mypage .right_btn_wrap .date_wrap {width: 220px;}
+  #mypage .right_btn_wrap .date_wrap input[type="date"] {width: 100px;}
+
+  #mypage.edit .half_section {margin-top: 40px;}
+  #mypage.edit .half_section {row-gap: 60px;}
+  #mypage.edit .half_section .edit_title {margin-bottom: 20px;}
+  #mypage.edit .half_section #pwChangeBtn {margin-top: 20px; height: 45px;}
+  #mypage .edit_btn_wrap .w_500 {max-width: 100%; height: 52px; font-size: 1.125em;}
+  #mypage .edit_btn_wrap.withdraw_btn_wrap {flex-direction: column; align-items: center; row-gap: 25px; margin: 50px auto 0;}
+  #mypage .edit_btn_wrap #withdrawBtn {position: static; transform: none;}
+  #mypage .table_layout {font-size: 12px;}
+
+  #mypage.withdraw .withdraw_wrap .withdraw_notice {padding: 35px 20px;}
+  #mypage.withdraw .withdraw_wrap .withdraw_notice .bold {margin-bottom: 20px;}
+  #mypage.withdraw .withdraw_wrap .withdraw_notice ul {line-height: 145%;}
+  #mypage.withdraw .withdraw_reason {margin: 30px auto 0; max-width: 415px;}
+  #mypage.withdraw .edit_btn_wrap {margin-top: 30px;}
+  #mypage.withdraw .edit_btn_wrap .border_btn {height: 40px;}
+  #mypage.withdraw .edit_btn_wrap .border_btn {column-gap: 7px;}
+  #mypage.withdraw .edit_btn_wrap .border_btn img {max-height: 15px;}
+  #mypage.withdraw .withdraw_reason .etc_hidden {width: calc(100% - 65px);}
+  #mypage.withdraw .withdraw_reason span {width: 65px;}
+  #mypage.withdraw .withdraw_reason select {width: 350px; max-width: calc(100% - 65px); height: 40px; background-size: 18px;}
+}

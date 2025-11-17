@@ -1,0 +1,166 @@
+/**
+ * 파일명 : clef_custom.php
+ * 내용 : 관리자 커스텀 css
+ * 최초작성날짜 : 2023/08/30
+ * 최초작성자 : 이보경
+ * ------------------------------------
+ * name       date        comment
+ * 이보경    2023/08/30    V1.0
+ */
+
+.text-right {text-align: left !important;}
+
+.custom_row .custom_btn3 button {padding: 4px 10px; margin-bottom: 0 !important;}
+.custom_row .custom_btn3 button:last-child {margin-right: 0;}
+
+.custom_search_top .col-sm-2 {min-width: 276px;}
+.custom_search_top .col-sm-3 {max-width: none; flex: 1;}
+.custom_search_top .pr-2 .text-right {text-align: right !important;}
+
+.custom_account .custom_phone > .row > div {flex: 0 0 150px; max-width: 33.3333%; padding: 0 0 0 15px;}
+.custom_account .custom_phone > .row {padding-right: 15px;}
+
+.custom_detail .col-form-label {max-width: 140px; flex: 0 0 140px;}
+.custom_detail .col-sm-4 {min-width: 450px;}
+.custom_detail .col-sm-10,
+.custom_detail .col-sm-11 {flex: 0 0 calc(100% - 140px); max-width: calc(100% - 140px);}
+.custom_detail .col-sm-6 {flex: 0 0 800px; max-width: calc(100% - 140px);}
+.custom_detail .col-sm-2 {width: 100%; max-width: none; flex: 0 0 calc(100% - 140px);}
+.custom_detail .col-sm-2 > .input-group {width: 100%; max-width: 150px;}
+.custom_detail .col-sm-2 input {text-align: center;}
+
+.custom_detail .col-sm-7 {flex: 0 0 calc(100% - 140px); max-width: calc(100% - 140px);}
+.custom_detail #option_list {display: flex; flex-wrap: wrap; row-gap: 20px; column-gap: 30px; width: 100%;}
+.custom_detail #option_list > div#OPTION_CK {width: calc(33.3333% - 30px); flex: 0 0 calc(33.3333% - 30px);}
+.custom_detail #option_list .form-group {row-gap: 1rem;}
+.custom_detail #option_list .form-group > label {max-width: 80px; flex: 0 0 80px;}
+.custom_detail #option_list .form-group > label + div {max-width: calc(100% - 80px); flex: 0 0 calc(100% - 80px);}
+.custom_detail #option_list .form-group > label + div.col-sm-4 {min-width: auto;}
+.custom_detail #option_list .form-group > label + div.col-sm-2 {flex: 0 0 auto; width: auto;}
+.custom_detail #option_list .form-group > label + div.col-sm-2.m-t-xs {max-width: calc(100% - 80px); flex: 0 0 calc(100% - 80px);}
+.custom_detail #option_list .form-group > label + div.col-sm-2.m-t-xs > .i-checks {margin-bottom: 0;}
+
+.custom_detail.tab-content #tab-4 .col-sm-5 {flex: 0 0 calc(50% - 140px); max-width: calc(50% - 140px);}
+
+.btn-outline {margin-bottom: 3px;}
+.custom_orderhistory .custom_half_wrap {display: flex; flex-wrap: wrap;}
+.custom_orderhistory .custom_half {width: 50%;}
+.custom_orderhistory .custom_half:nth-child(2n - 1) {padding-right: 50px;}
+.custom_orderhistory .form-group.row {row-gap: 10px;}
+.custom_orderhistory .form-group.row > label.col-form-label {flex: 0 0 180px; max-width: 100%;}
+.custom_orderhistory .form-group.row > .col-sm-2:not(label) {flex: 0 0 calc(100% - 180px); max-width: 100%;}
+.custom_orderhistory .form-group.row > .col-sm-2:not(label) input,
+.custom_orderhistory .form-group.row > .col-sm-2:not(label) select {max-width: 450px;}
+.custom_orderhistory .custom_address {display: flex; align-items: center; column-gap: 15px;}
+.custom_orderhistory .form-group.row > .col-sm-2:not(label).custom_address input {max-width: calc(450px - 104px);}
+.custom_orderhistory .custom_address #addressBtn {min-width: 89px;}
+.custom_orderhistory .custom_half_wrap .hr-line-dashed {display: none;}
+.custom_orderhistory .custom-file .custom-file-label {max-width: 450px;}
+
+/* Piknic Shop */
+.ibox-content .row .pr-2 {padding-right: 15px !important;}
+.ibox-content .row .pr-2 .btn-primary {margin-top: -4px;}
+
+/* Piknic 계정관리 > 권한설정 */
+.authority_custom {}
+.authority_custom .abc-checkbox label.m-md {margin: 6px 20px;}
+.authority_custom .abc-checkbox label {display: inline-block;}
+.authority_custom .abc-checkbox label:not(.m-md) {padding-bottom: 8px; padding-top: 18px; font-weight: bold;}
+.authority_custom .abc-checkbox label:not(.m-md)::before,
+.authority_custom .abc-checkbox label:not(.m-md)::after {top: 18px;}
+.authority_custom .col-md-4 > .abc-checkbox {display: flex; align-items: center; font-weight: bold; color: #17a2b8; border-bottom: 1px dashed #e2e2e2; margin-bottom: 5px;}
+.authority_custom .col-md-4 > .abc-checkbox label {padding-bottom: 5px !important;}
+.authority_custom .col-md-4 > .abc-checkbox.abc-checkbox-circle label::before {border-color: #17a2b8; border-width: 2px; top: 21px;}
+
+
+
+@media (min-width: 576px) {
+  .custom_row .col-sm-1,
+  .custom_row .col-sm-3 {min-width: max-content;}
+}
+
+@media (max-width: 1460px) {
+  .custom_detail #option_list > div#OPTION_CK {width: calc(50% - 30px); flex: 0 0 calc(50% - 30px);}
+}
+
+@media (max-width: 1240px) {
+  .custom_orderhistory .custom_half {width: 100%;}
+  .custom_orderhistory .custom_half:nth-child(2n - 1) {padding-right: 0;}
+  .custom_orderhistory .form-group.row > label.col-form-label {flex: 0 0 175px;}
+  .custom_orderhistory .form-group.row > .col-sm-2:not(label) {flex: 0 0 calc(100% - 175px);}
+  .custom_orderhistory .custom_half_wrap .hr-line-dashed {display: block; width: 100%;}
+}
+
+@media (max-width: 1120px) {
+  .custom_search_top .col-sm-2 {min-width: 33.3333%;}
+  .custom_detail #option_list > div#OPTION_CK {width: 100%; flex: 0 0 100%;}
+  .custom_detail.tab-content #tab-4 .form-group {row-gap: 10px;}
+  .custom_detail.tab-content #tab-4 .col-sm-5 {flex: 0 0 calc(100% - 140px); max-width: calc(100% - 140px);}
+  .custom_detail.tab-content #tab-5 .col-sm-5 {flex: 0 0 calc(100% - 140px); max-width: calc(100% - 140px);}
+}
+
+
+@media (max-width: 980px) {
+  .html5buttons {float: none; margin-top: 10px;}
+  .dataTables_length {float: none;}
+  div.dt-buttons {float:none; width: 100%; text-align: center; margin-bottom: 0.5em}
+  div.dt-buttons a.btn {float: none}
+  div.dataTables_wrapper div.dataTables_length,
+  div.dataTables_wrapper div.dataTables_filter, 
+  div.dataTables_wrapper div.dataTables_info, 
+  div.dataTables_wrapper div.dataTables_paginate {text-align: center !important;}
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: center !important;}
+
+  .custom_detail .col-form-label {max-width: 132px;}
+  .custom_detail .col-sm-4 {min-width: auto; max-width: calc(100% - 132px - 89px - 15px); flex: 0 0 calc(100% - 132px - 89px - 15px);}
+  .custom_detail .col-sm-6 {flex: 0 0 calc(100% - 140px); max-width: calc(100% - 140px);}
+  .custom_detail .col-lg-6 {flex: 0 0 calc(100% - 132px); max-width: calc(100% - 132px);}
+
+  .m-b-none {word-break: keep-all;}
+  .m-b-none br {display: none;}
+}
+
+@media (max-width: 768px) {
+  .mt-2, .my-2 {margin-top: 0 !important;}
+  .custom_detail .col-form-label {max-width: 100%; width: 100%; flex: 100%;}
+  .custom_detail .col-sm-4 {max-width: 100%; flex: 100%;}
+  .custom_detail .custom_address .col-sm-4 {max-width: calc(100% - 89px - 15px); flex: 100%;}
+  .custom_detail .col-form-label br {display: none;}
+  .custom_detail .col-sm-2 {flex: 0 0 100%;}
+  .custom_detail .col-sm-11,
+  .custom_detail .col-sm-6,
+  .custom_detail .col-sm-7 {flex: 0 0 100%; max-width: 100%;}
+}
+
+
+@media (max-width: 576px) {
+  .custom_row .col-sm-1,
+  .custom_row .col-sm-3 {min-width: max-content;}
+  .custom_row .col-form-label {padding-top: 0;}
+  .custom_row .col-sm-5 {width: calc(100% - 130px);}
+  .custom_row .col-sm-3 {width: 115px; padding: 0 15px 0 0;}
+  .custom_row .custom_btn3 button {padding: 3px 9px; margin-right: 6px;}
+  .custom_row .custom_btn3 button i {font-size: 12px;}
+
+  .custom_search_top .pr-2 {margin-top: 1rem;}
+
+  .custom_detail .col-sm-6 {flex: 0 0 100%; max-width: 100%;}
+  .custom_detail #option_list {row-gap: 10px;}
+  
+  .custom_orderhistory .form-group.row > label.col-form-label {flex: 0 0 100%;}
+  .custom_orderhistory .form-group.row > .col-sm-2:not(label) {flex: 0 0 100%;}
+  .custom_orderhistory .form-group.row {row-gap: 3px; margin-bottom: 7px;}
+  .custom_orderhistory .form-group.row > .col-sm-2:not(label) {margin-bottom: 7px;}
+
+  .custom_detail .col-sm-10.custom_detail_date {flex: 0 0 100%; max-width: 100%;}
+  .custom_detail.tab-content #tab-4 .col-sm-5 {flex: 0 0 100%; max-width: 100%;}
+  .custom_detail.tab-content #tab-5 .col-sm-5 {flex: 0 0 100%; max-width: 100%;}
+}
+
+@media (max-width: 400px) {
+  .custom_search_top .input-group > span {display: none;}
+  .custom_search_top .input-group.w140 {max-width: calc((100% - 38px)/2);}
+
+  .custom_detail .col-sm-10.custom_detail_date .input-group > span {display: none;}
+  .custom_detail .col-sm-10.custom_detail_date .input-group.w140 {max-width: calc((100% - 38px)/2);}
+}
